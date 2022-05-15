@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <title>Gossip Girl</title>
+    <link href="test1/index.css" type="text/css" rel="stylesheet">
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  </head>
+  <body>
+    <div class="header">
+    <h1><i class="fa-solid fa-face-zipper" style="color: white;"></i> Welcome <%= uname %> to backend development of Gossip Girl!</h1>
+    </div>
+
+    <h2>You have been here <%=time%> seconds ago</h2>
+
+    <form action="/login" method="get">
+      <button type="submit">Sign In</button>
+    </form>
+    <form action="/register" method="get">
+      <button type="submit">Sign Up</button>
+    </form>
+    <form action="/changeMessage" method="post">
+      <input type="text" placeholder="Change your message" name="message"></input>
+      <button type="submit">Change</button>
+    </form>
+
+    <table>
+      <tr>
+        <th class="title">Gossip girls (<%=table.length%>):</th>
+      </tr>
+      <% for (var i = 0; i < table.length; i++) { %>
+      <tr>
+        <td><%= table[i].uname %> </td>
+	  </tr>
+	  <tr>
+        <td>
+          <div class="messageBox">
+          <i class="fa-solid fa-message" style="color: white;"></i> <%= table[i].message %>
+          </div>
+        </td>
+        <td class="likeBox"><i class="fa-solid fa-heart" style="color: black;"></i> <%= table[i].likeCount %></td>
+        <td>
+          <form action="/like" method="post">
+          <input class="invisible" type="text" value="<%=table[i].uname%>" name="target">
+          <button class="likeButton" type="submit">Like</button>
+          </form>
+        </td>
+	  </tr>
+      <% }; %>
+    </table>
+
+  </body>
+</html>

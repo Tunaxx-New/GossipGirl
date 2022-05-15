@@ -1,0 +1,132 @@
+
+/*СИСИСИС ЕПТТТТ*/
+
+:root {
+    --like_light:pink!important;
+}
+
+.something {
+    clear: both;
+    position: relative;
+    bottom: 0;
+    margin-top: 5%;
+}
+
+.proper_comment_margin {
+    margin: 3% 3% 3% 3%!important;
+}
+
+.proper_right_left_margin {
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.hcenter {
+    margin: auto;
+    width: 80%;
+    text-align: center;
+}
+
+.center {
+    margin: auto;
+    width: 65%;
+    outline:none !important;
+    border: 0!important;
+
+}
+
+.question_bar {
+    margin: auto;
+    border-radius: 30px;
+    background-color: #f7f7f7;
+}
+
+.question_row {
+    margin: 1% 1% 1% 1%;
+    font-family: var(--bs-body-font-family);
+    font-size: var(--bs-body-font-size);
+}
+
+.question_body {
+
+}
+
+.center_button_cards {
+  margin: auto;
+  margin-top: 2%!important;
+  width: 80%;
+  border-radius: 25px;
+}
+
+.center_button_comments {
+  margin:auto;
+  margin-bottom: 2%!important;
+  width: 80%;
+  border-radius: 25px;
+}
+
+.card {
+    margin-top: 3%;
+    margin-bottom:3%;
+}
+
+.form-control {
+  margin-bottom: 1%;
+}
+
+.comment {
+  margin: auto;
+  margin-top: 3%!important;
+  margin-bottom: 3%!important;
+  width: 90%;
+  background-color: #f7f7f7;
+  padding: 10px 5px 10px 3px;
+  position: relative;
+  border-radius: 15px;
+  align-items: center!important;
+}
+
+.like_button {
+  color:black!important;
+  border-color: pink!important
+}
+
+.btn-outline-success {
+  margin-right: 2%;
+}
+
+.btn-outline-info {
+  color: black!important;
+}
+
+.btn-outline-warning {
+  color: black!important;
+  border-color: #FF1271!important;
+}
+
+.btn-outline-warning:hover, .btn-outline-warning:focus, .btn-outline-warning:active {
+   color: black!important;
+   background-color: #FF1271!important;
+   border-color: #FF1271!important;
+   box-shadow: 0 0 0 5px rgba(255, 18, 113, 1)!important;
+}
+
+.btn-outline-primary {
+    color: black!important;
+    border-color: var(--like_light)!important;
+
+}
+.btn-outline-primary:hover, .btn-outline-primary:focus, .btn-outline-primary:active {
+   color: black!important;
+   background-color: var(--like_light)!important;
+   border-color: var(--like_light)!important;
+   box-shadow: 0 0 0 5px rgba(237, 190, 211, 1)!important;
+}
+
+.g-height-50 {
+    height: 50px;
+}
+
+.g-width-50 {
+    width: 50px !important;
+}

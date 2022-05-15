@@ -1,0 +1,88 @@
+h1 {
+  font-family: 'Brush Script MT', cursive;
+  color: #F75F85;
+}
+
+.header {
+ background-color: #333333;
+  box-shadow: 0 0 2em #000000;
+}
+
+from {
+ margin: 0;
+}
+
+input {
+  background: #ffffff;
+		box-shadow: 0 0 2em hsl(231deg 62% 94%);
+		padding: 1em;
+		display: flex;
+		flex-direction: column;
+		gap: 0.5em;
+		border-radius: 20px;
+		color: hsl(0deg 0% 30%);
+			outline: none;
+			border: none;
+				color: hsl(0deg 0% 0%);
+				font-size: 0.9em;
+}
+button {
+  margin: 8px;
+  padding: 16px;
+		background: #1B1A24;
+		color: #ffffff;
+		border: none;
+		border-radius: 30px;
+		font-weight: 600;
+}
+/*
+table {
+  width: 100%;
+}
+
+tbody {
+  width:100%;
+}
+
+tr {
+  width: 100%;
+}*/
+td {
+  vertical-align: middle;
+  max-width: 600px;
+}
+
+.likeButton {
+  background-color: #F75F85;
+  padding: 16px;
+  border: none;
+  border-radius: 128px;
+}
+.likeButton:active {
+  background-color: #000000;
+}
+.likeButton:focus {
+  outline-color: transparent;
+  outline-style:solid;
+  box-shadow: 0 0 0 4px #F75F85;
+  transition: 0.7s;
+}
+
+.messageBox {
+  background-color: #F7BAC5;
+  padding: 16px;
+  width: 90%;
+  overflow-wrap: break-word;
+}
+
+.invisible {
+  visibility: hidden;
+  width: 0;
+height: 0;
+padding: 0;
+}
+
+.likeBox {
+  background-color: #C68685;
+  padding: 16px;
+}
