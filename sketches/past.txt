@@ -1,0 +1,138 @@
+//MYSQL-TEST1--------------------------------------
+function getByName(uname, callback)
+{
+  let query = "SELECT " + name + " FROM " + database + " WHERE " + name + "='" + uname + "';"
+  connection.query(query, (error, results) =>
+  {
+    if (error) {
+      console.log(error.message)
+    }
+    return callback(results)
+  })
+}
+function getUser(uname, password, callback)
+{
+  let query = "SELECT *  FROM " + database + " WHERE " + name + "='" + uname + "' AND password='" + password + "';"
+  connection.query(query, (error, results) =>
+  {
+    if (error) {
+      console.log(error.message)
+    }
+    return callback(results)
+  })
+}
+function newUser(id, uname, password, message, callback)
+{
+  let query  = "INSERT INTO " + database + "(id, " + name + ", password, message)"
+  let values = "VALUES (";
+  values += "'" + id + "', "
+  values += "'" + uname + "', "
+  values += "'" + password + "', "
+  values += "'" + message + "');"
+  query  += values
+
+  connection.query(query, (error, results) =>
+  {
+    if (error) {
+      console.log(error.message)
+      return
+    }
+    return callback(results)
+  })
+}
+function changeMessage(uname, password, message, callback)
+{
+  let query  = "UPDATE " + database + " SET message = '" + message + "' WHERE " + name + "='" + uname + "' AND password='" + password + "';"
+
+  connection.query(query, (error, results) =>
+  {
+    if (error) {
+      console.log(error.message)
+      return
+    }
+    return callback(results)
+  })
+}
+function getTable(callback)
+{
+  let query = "SELECT uname, message, likeCount  FROM " + database + ";"
+  connection.query(query, (error, results) =>
+  {
+    if (error) {
+      console.log(error.message)
+    }
+    return callback(results)
+  })
+}
+function getLiked(uname, callback)
+{
+  let query = "SELECT liked, likeCount FROM " + database + " WHERE uname='" + uname + "';"
+  connection.query(query, (error, results) =>
+  {
+    if (error) {
+      console.log(error.message)
+    }
+    return callback(results)
+  })
+}
+function setLiked(uname, liked, likeCount, callback)
+{
+  let query  = "UPDATE " + database + " SET liked = '" + liked + "', likeCount = '" + likeCount + "' WHERE " + name + "='" + uname + "';"
+  connection.query(query, (error, results) =>
+  {
+    if (error) {
+      console.log(error.message)
+      return
+    }
+    return callback(results)
+  })
+}
+
+app.get("/test1", (req, res) =>
+{
+  let ses
+  let now = Date.now() / 1000
+  ses = Math.trunc(now - req.session.first_online)
+  req.session.first_online = Date.now() / 1000
+  getTable((result) =>
+  {
+  res.render(path.join(__dirname, 'html', 'test1', 'index'),
+          {
+            uname: req.cookies.uname,
+            table: result,
+            time: ses
+         })
+  })
+})
+app.get("/test1/index.css", (req, res) =>
+{
+  res.sendFile(path.join(__dirname, 'html', 'test1', 'index.css'))
+})
+
+//-------------------------------------------------
+
+//FunMYSQL-----------------------------------------
+function getCanvas(callback)
+{
+  let query = "SELECT bitmap FROM canvas"
+  connection.query(query, (error, results) =>
+  {
+    if (error) {
+      console.log(error.message)
+    }
+    return callback(results)
+  })
+}
+function setCanvas(y, x, color, callback)
+{
+  let query = "update canvas set bitmap = JSON_SET(bitmap, '$[" + y + "][" + x + "]', '" + color + "');"
+console.log(query)
+connection.query(query, (error, results) =>
+  {
+    if (error) {
+      console.log(error.message)
+    }
+    return callback(results)
+  })
+}
+//-------------------------------------------------
