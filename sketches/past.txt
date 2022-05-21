@@ -1,15 +1,4 @@
 //MYSQL-TEST1--------------------------------------
-function getByName(uname, callback)
-{
-  let query = "SELECT " + name + " FROM " + database + " WHERE " + name + "='" + uname + "';"
-  connection.query(query, (error, results) =>
-  {
-    if (error) {
-      console.log(error.message)
-    }
-    return callback(results)
-  })
-}
 function getUser(uname, password, callback)
 {
   let query = "SELECT *  FROM " + database + " WHERE " + name + "='" + uname + "' AND password='" + password + "';"
@@ -109,6 +98,36 @@ app.get("/test1/index.css", (req, res) =>
   res.sendFile(path.join(__dirname, 'html', 'test1', 'index.css'))
 })
 
+app.get("/canvas", (req, res) =>
+{
+  getCanvas((results) =>
+  {
+    var bitmap = Object.values(JSON.parse(JSON.stringify(results)))[0].bitmap
+    res.render(path.join(__dirname, 'html/fun', 'canvas'),
+    {
+col: req.cookies.color,
+w:500,
+h:700,
+      bitmap: bitmap
+    })
+  })
+})
+app.get("/canvas.css", (req, res) =>
+{
+  res.sendFile(path.join(__dirname, 'html/fun','canvas.css'))
+})
+app.post("/canvas", (req, res) =>
+{
+  var x = req.body.x
+  var y = req.body.y
+  res.cookie('color', req.body.color)
+  var color = req.body.color
+  setCanvas(x, y, color, (results) =>
+  {
+    res.redirect("/canvas")
+  })
+})
+
 //-------------------------------------------------
 
 //FunMYSQL-----------------------------------------
@@ -136,3 +155,8 @@ connection.query(query, (error, results) =>
   })
 }
 //-------------------------------------------------
+
+  //let ses
+  //let now = Date.now() / 1000
+  //ses = Math.trunc(now - req.session.first_online)
+  //req.session.first_online = Date.now() / 1000

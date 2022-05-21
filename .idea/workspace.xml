@@ -2,9 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c635121-aa8d-41e8-9200-ae9916672b50" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/database/validator.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mongo.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/googleAds.mjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/fun/canvas.css" beforeDir="false" afterPath="$PROJECT_DIR$/sketches/fun/canvas.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/fun/canvas.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/sketches/fun/canvas.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/style/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/html/view/index.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/register.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/style/register.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/test1/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/sketches/test1/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/test1/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/sketches/test1/index.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/test1/index.ejs.save" beforeDir="false" afterPath="$PROJECT_DIR$/sketches/test1/index.ejs.save" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/view/answer.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/html/view/answer.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sketches/past.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sketches/past.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sqlConsole.js" beforeDir="false" afterPath="$PROJECT_DIR$/sketches/sqlConsole.js" afterDir="false" />
+    </list>
+    <list id="43352558-03b7-42f9-bea0-2243e05e2fd9" name="Changes by Ecl1ps0" comment="">
+      <change beforePath="$PROJECT_DIR$/html/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/html/view/index.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -15,12 +35,65 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/html/view/index.ejs">
+      <ranges>
+        <range start1="6" end1="7" start2="6" end2="7" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="8" end1="16" start2="8" end2="15" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="24" end1="27" start2="23" end2="29" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="28" end1="28" start2="30" end2="31" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="54" end1="56" start2="57" end2="61" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="57" end1="58" start2="62" end2="63" changelist="43352558-03b7-42f9-bea0-2243e05e2fd9" />
+        <range start1="60" end1="60" start2="65" end2="66" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="62" end1="63" start2="68" end2="68" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="64" end1="68" start2="69" end2="79" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="72" end1="72" start2="83" end2="84" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/index.js">
+      <ranges>
+        <range start1="6" end1="8" start2="6" end2="9" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="11" end1="18" start2="12" end2="12" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="21" end1="27" start2="15" end2="15" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="28" end1="82" start2="16" end2="16" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="83" end1="84" start2="17" end2="23" changelist="43352558-03b7-42f9-bea0-2243e05e2fd9" />
+        <range start1="85" end1="97" start2="24" end2="28" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="99" end1="100" start2="30" end2="51" changelist="43352558-03b7-42f9-bea0-2243e05e2fd9" />
+        <range start1="101" end1="108" start2="52" end2="57" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="110" end1="124" start2="59" end2="59" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="125" end1="125" start2="60" end2="61" changelist="43352558-03b7-42f9-bea0-2243e05e2fd9" />
+        <range start1="127" end1="130" start2="63" end2="66" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="131" end1="133" start2="67" end2="74" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="134" end1="135" start2="75" end2="76" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="139" end1="139" start2="80" end2="97" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="140" end1="141" start2="98" end2="100" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="142" end1="143" start2="101" end2="113" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="145" end1="149" start2="115" end2="115" changelist="43352558-03b7-42f9-bea0-2243e05e2fd9" />
+        <range start1="150" end1="151" start2="116" end2="116" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="152" end1="178" start2="117" end2="117" changelist="43352558-03b7-42f9-bea0-2243e05e2fd9" />
+        <range start1="180" end1="191" start2="119" end2="124" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="192" end1="194" start2="125" end2="126" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="195" end1="204" start2="127" end2="128" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="205" end1="221" start2="129" end2="129" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="222" end1="223" start2="130" end2="136" changelist="43352558-03b7-42f9-bea0-2243e05e2fd9" />
+        <range start1="254" end1="255" start2="167" end2="168" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="265" end1="281" start2="178" end2="182" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="282" end1="283" start2="183" end2="184" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="284" end1="285" start2="185" end2="186" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="286" end1="294" start2="187" end2="188" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="295" end1="295" start2="189" end2="193" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="297" end1="300" start2="195" end2="216" changelist="43352558-03b7-42f9-bea0-2243e05e2fd9" />
+      </ranges>
+    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -30,19 +103,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/Documents/.GOGI&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/User/Documents/.GOGI",
+    "list.type.of.created.stylesheet": "CSS",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "io.unthrottled.amii.config.ui.PluginSettingsUI",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Documents\.GOGI\database" />
       <recent name="C:\Users\User\Documents\.GOGI\sketches" />
+      <recent name="C:\Users\User\Documents\.GOGI\html\view" />
+      <recent name="C:\Users\User\Documents\.GOGI\html\style" />
     </key>
   </component>
   <component name="RunManager">
@@ -61,6 +140,8 @@
       <workItem from="1650863667911" duration="3005000" />
       <workItem from="1650989596871" duration="12000" />
       <workItem from="1652977136186" duration="3186000" />
+      <workItem from="1652981969454" duration="8503000" />
+      <workItem from="1653133320604" duration="6076000" />
     </task>
     <servers />
   </component>

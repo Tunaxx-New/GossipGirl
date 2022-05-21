@@ -1,0 +1,52 @@
+body{
+    background-color: whitesmoke!important;
+}
+.main{
+    margin-top: 40px;
+}
+.adminName{
+    background-color: darkgray;
+    min-width: 290px;
+    max-width: 500px;
+    margin: 20px;
+    padding: 20px;
+}
+.SortingDiv{
+    padding: 20px;
+}
+.AddNewPerson{
+    background-color: darkgray;
+    min-width: 290px;
+    max-width: 500px;
+    margin-top: 50px!important;
+    margin: 20px;
+    padding: 10px;
+    align-items: center;
+}
+.AddNewPerson input{
+    width: 290px!important;
+}
+.PersonalInfo{
+    /*background-color: darkgray;*/
+    padding: 20px;
+    position: inherit;
+    margin-right: 100px;
+    height: auto;
+}
+.table{
+    width: 1000px;
+    margin:auto;
+}
+.ThId{
+    width: 40px!important;
+}
+input{
+    width: 125px;
+    color: gray;
+}
+.ButtonPink{
+    background-color: hotpink!important;
+}
+.ButtonGray{
+    background-color: gray!important;
+}
