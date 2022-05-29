@@ -1,15 +1,11 @@
-
-/*СИСИСИС ЕПТТТТ*/
-
 :root {
     --like_light:pink!important;
 }
 
-.something {
-    clear: both;
-    position: relative;
-    bottom: 0;
-    margin-top: 5%;
+.footer {
+    flex: 0 0 auto;
+    background-color: grey;
+    margin-top: 32px!important;
 }
 
 .proper_comment_margin {
@@ -75,15 +71,9 @@
 }
 
 .comment {
-  margin: auto;
-  margin-top: 3%!important;
-  margin-bottom: 3%!important;
-  width: 90%;
   background-color: #f7f7f7;
-  padding: 10px 5px 10px 3px;
-  position: relative;
-  border-radius: 15px;
-  align-items: center!important;
+  width: 100%;
+  padding: 8px;
 }
 
 .like_button {
@@ -129,4 +119,108 @@
 
 .g-width-50 {
     width: 50px !important;
+}
+
+.toast-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 32px;
+}
+
+iframe {
+    border-left: 6px solid green;
+}
+#posts iframe {
+    border: none!important;
+}
+
+/* Scroll bar */
+/* width */
+::-webkit-scrollbar {
+    width: 1px;
+    height: 1px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+/* Carousel */
+
+.PatientsReviews {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+td {
+    width: 128px!important;
+}
+
+.carousel-item{
+    font-family: 'Avenir', serif;
+    color: black;
+    font-size: 15px;
+    letter-spacing: 1.7px;
+}
+.row {
+    width:100% !important;
+    margin:0!important;
+}
+.carousel {
+    width:100% !important;
+}
+.col-lg-10 {
+    width:100% !important
+}
+.carousel-control-next, .carousel-control-prev {
+    position: relative!important;
+    display: inline!important;
+}
+.table {
+    margin-bottom: 0!important;
+}
+
+p {
+    margin-bottom: 0!important;
+}
+
+.media {
+    background-color: white!important;
+    margin-left: 8px!important;
+    box-shadow: 0 3px 0 #000;
+}
+.news-image {
+    width: 100%;
+}
+.news-title {
+    font-size: 24px;
+}
+.news-description {
+    font-size: 16px;
+}
+
+.chatBox {
+    position: fixed;
+    right: 16px;
+    bottom: 0;
+    width: 50%;
+    height: 75%;
+}
+.chatFrame {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 100% !important;
 }

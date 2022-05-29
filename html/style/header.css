@@ -1,0 +1,15 @@
+
+
+.avatar {
+    width: 48px;
+    height: 48px;
+    object-fit:cover;
+    border-radius: 32px;
+}
+
+.dropdown-menu {
+    right: 0!important;
+    left: auto!important;
+}
+
+/* CyberPunk button*/

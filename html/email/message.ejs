@@ -24,14 +24,15 @@
 </head>
 <body>
 <h1 style="text-align: center;"><span style="color: #000000;"><strong>Welcome to Gossip Girl</strong></span></h1>
-<h3 style="text-align: center;"><span style="color: #808080;"><strong>You are ready to send messages</strong></span></h3>
+<h3 style="text-align: center;"><span style="color: #808080;"><strong>You are ready to create posts!</strong></span></h3>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <div class="hcentered">
-  <form action="tunaxx.me/auth" method="post">
-    <input name="barcode" value="123" style="visibility: hidden; width: 0; height: 0;">
-    <button type="button" name="myButton" class="btn btn-outline-success">Confirm email</button>
+  <form action="tunaxx.me/auth" method="get">
+    <input type="text" name="login" value="<%=login%>" style="color:transparent; background-color: transparent; border: none;" hidden><br>
+    <input type="text" name="barcode" value="<%=barcode%>" style="color:transparent; background-color: transparent; border: none;" hidden><br>
+    <button type="submit" class="btn btn-outline-success">Confirm email</button>
   </form>
 </div>
 <p>&nbsp;</p>

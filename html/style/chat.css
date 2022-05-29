@@ -1,0 +1,29 @@
+.sidebar {
+    width: 128px!important;
+    overflow-y: auto;
+    overflow-x: hidden!important;
+    height: 128px!important;
+}
+.side-button {
+    width: 128px!important;
+    height: 128px!important;
+}
+.side-button a {
+    width: 128px!important;
+    height: 128px!important;
+}
+iframe {
+    width: 100%!important;
+    height:100% !important;
+}
+.d-flex {
+    height: 100% !important
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+}
+.col, .row, .sidebar {
+    height: 100% !important;
+}

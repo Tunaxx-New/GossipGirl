@@ -4,7 +4,13 @@ var answerSchema = mongoose.Schema
 ({
     user:
         {
-            type: String
+            type: Object,
+            login: {
+                type: String
+            },
+            avatarExtension: {
+                type: String,
+            }
         },
     postId:
         {
@@ -17,6 +23,23 @@ var answerSchema = mongoose.Schema
     time:
         {
             type: String
+        },
+    timeAgo:
+        {
+            type: String
+        },
+    parent:
+        {
+            type: String,
+            default: 'post'
+        },
+    likes:
+        {
+            type: Array
+        },
+    dislikes:
+        {
+            type: Array
         }
 })
 

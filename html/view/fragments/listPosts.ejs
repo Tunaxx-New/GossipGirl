@@ -1,0 +1,49 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="/admin">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>User</th>
+        <th>Title</th>
+        <th>Source</th>
+        <th>Topic</th>
+        <th>Confirmed</th>
+        <th>Created</th>
+    </tr>
+    </thead>
+    <tbody>
+    <%for (var o = 0; o < posts.length; o++){%>
+        <tr>
+            <th class="ThId align-middle"><%=id[o]%></th>
+            <form action="/postAction" method="get">
+                <td class="align-middle"><%= posts[o].user%></td>
+                <td class="align-middle"><%= posts[o].title%></td>
+                <td class="align-middle"><%= posts[o].src%></td>
+                <td class="align-middle"><%= posts[o].topic%></td>
+                <td class="align-middle"><%= posts[o].visible%></td>
+                <td class="align-middle"><%= posts[o].time%></td>
+                <td class="align-middle">
+                    <input class="form-label" name="key" value="1" hidden>
+                    <input class="form-label" name="postId" value="<%=posts[o]._id%>" hidden>
+                    <button class="btn ButtonPink"  type="submit">Accepted</button>
+                </td>
+            </form>
+            <td class="align-middle">
+                <form action="/postAction" method="get">
+                    <input class="form-label" name="key" value="2" hidden>
+                    <input class="form-label" name="postId" value="<%=posts[o].id%>" hidden>
+                    <button class="btn ButtonGray"  type="submit">Delete</button>
+                </form>
+            </td>
+
+        </tr>
+    <%}%>
+
+    </tbody>
+</table>

@@ -2,30 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c635121-aa8d-41e8-9200-ae9916672b50" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/database/validator.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mongo.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/fun/canvas.css" beforeDir="false" afterPath="$PROJECT_DIR$/sketches/fun/canvas.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/fun/canvas.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/sketches/fun/canvas.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/style/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/html/view/index.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/register.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/style/register.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/test1/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/sketches/test1/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/test1/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/sketches/test1/index.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/test1/index.ejs.save" beforeDir="false" afterPath="$PROJECT_DIR$/sketches/test1/index.ejs.save" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/view/answer.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/html/view/answer.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/Answer.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/Answer.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/Post.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/Post.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/User.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/User.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/email.js" beforeDir="false" afterPath="$PROJECT_DIR$/email.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/email/message.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/email/message.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/register.html.save" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/style/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/style/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/view/admin.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/html/view/admin.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/view/answer.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/html/view/fragments/answer.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/view/error.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/html/view/error.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/view/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/html/view/index.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mongo.js" beforeDir="false" afterPath="$PROJECT_DIR$/mongo.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sketches/past.txt" beforeDir="false" afterPath="$PROJECT_DIR$/sketches/past.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sql.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sqlConsole.js" beforeDir="false" afterPath="$PROJECT_DIR$/sketches/sqlConsole.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sketches/fun/canvas.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sketches/fun/canvas.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sketches/past.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sketches/sqlConsole.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sketches/test1/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sketches/test1/index.ejs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sketches/test1/index.ejs.save" beforeDir="false" />
     </list>
     <list id="43352558-03b7-42f9-bea0-2243e05e2fd9" name="Changes by Ecl1ps0" comment="">
-      <change beforePath="$PROJECT_DIR$/html/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/html/view/index.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/style/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/style/admin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/view/admin.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/html/view/admin.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/view/answer.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/html/view/fragments/answer.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mongo.js" beforeDir="false" afterPath="$PROJECT_DIR$/mongo.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,53 +54,88 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/html/view/index.ejs">
+    <file path="$PROJECT_DIR$/html/view/admin.ejs">
       <ranges>
-        <range start1="6" end1="7" start2="6" end2="7" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
-        <range start1="8" end1="16" start2="8" end2="15" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
-        <range start1="24" end1="27" start2="23" end2="29" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
-        <range start1="28" end1="28" start2="30" end2="31" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
-        <range start1="54" end1="56" start2="57" end2="61" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
-        <range start1="57" end1="58" start2="62" end2="63" changelist="43352558-03b7-42f9-bea0-2243e05e2fd9" />
-        <range start1="60" end1="60" start2="65" end2="66" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
-        <range start1="62" end1="63" start2="68" end2="68" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
-        <range start1="64" end1="68" start2="69" end2="79" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
-        <range start1="72" end1="72" start2="83" end2="84" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="5" end1="6" start2="5" end2="6" changelist="43352558-03b7-42f9-bea0-2243e05e2fd9" />
+        <range start1="7" end1="7" start2="7" end2="9" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="10" end1="30" start2="12" end2="77" changelist="43352558-03b7-42f9-bea0-2243e05e2fd9" />
+        <range start1="31" end1="50" start2="78" end2="119" changelist="43352558-03b7-42f9-bea0-2243e05e2fd9" />
+        <range start1="51" end1="91" start2="120" end2="130" changelist="43352558-03b7-42f9-bea0-2243e05e2fd9" />
+        <range start1="92" end1="94" start2="131" end2="140" changelist="43352558-03b7-42f9-bea0-2243e05e2fd9" />
+        <range start1="97" end1="97" start2="143" end2="145" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="98" end1="98" start2="146" end2="149" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="99" end1="99" start2="150" end2="159" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
       </ranges>
     </file>
     <file path="$PROJECT_DIR$/index.js">
       <ranges>
-        <range start1="6" end1="8" start2="6" end2="9" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
-        <range start1="11" end1="18" start2="12" end2="12" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
-        <range start1="21" end1="27" start2="15" end2="15" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
-        <range start1="28" end1="82" start2="16" end2="16" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
-        <range start1="83" end1="84" start2="17" end2="23" changelist="43352558-03b7-42f9-bea0-2243e05e2fd9" />
-        <range start1="85" end1="97" start2="24" end2="28" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
-        <range start1="99" end1="100" start2="30" end2="51" changelist="43352558-03b7-42f9-bea0-2243e05e2fd9" />
-        <range start1="101" end1="108" start2="52" end2="57" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
-        <range start1="110" end1="124" start2="59" end2="59" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
-        <range start1="125" end1="125" start2="60" end2="61" changelist="43352558-03b7-42f9-bea0-2243e05e2fd9" />
-        <range start1="127" end1="130" start2="63" end2="66" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
-        <range start1="131" end1="133" start2="67" end2="74" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
-        <range start1="134" end1="135" start2="75" end2="76" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
-        <range start1="139" end1="139" start2="80" end2="97" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
-        <range start1="140" end1="141" start2="98" end2="100" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
-        <range start1="142" end1="143" start2="101" end2="113" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
-        <range start1="145" end1="149" start2="115" end2="115" changelist="43352558-03b7-42f9-bea0-2243e05e2fd9" />
-        <range start1="150" end1="151" start2="116" end2="116" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
-        <range start1="152" end1="178" start2="117" end2="117" changelist="43352558-03b7-42f9-bea0-2243e05e2fd9" />
-        <range start1="180" end1="191" start2="119" end2="124" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
-        <range start1="192" end1="194" start2="125" end2="126" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
-        <range start1="195" end1="204" start2="127" end2="128" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
-        <range start1="205" end1="221" start2="129" end2="129" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
-        <range start1="222" end1="223" start2="130" end2="136" changelist="43352558-03b7-42f9-bea0-2243e05e2fd9" />
-        <range start1="254" end1="255" start2="167" end2="168" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
-        <range start1="265" end1="281" start2="178" end2="182" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
-        <range start1="282" end1="283" start2="183" end2="184" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
-        <range start1="284" end1="285" start2="185" end2="186" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
-        <range start1="286" end1="294" start2="187" end2="188" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
-        <range start1="295" end1="295" start2="189" end2="193" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
-        <range start1="297" end1="300" start2="195" end2="216" changelist="43352558-03b7-42f9-bea0-2243e05e2fd9" />
+        <range start1="6" end1="7" start2="6" end2="7" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="8" end1="9" start2="8" end2="16" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="17" end1="18" start2="24" end2="45" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="24" end1="29" start2="51" end2="63" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="31" end1="31" start2="65" end2="96" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="53" end1="58" start2="118" end2="138" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="60" end1="60" start2="140" end2="163" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="61" end1="61" start2="164" end2="205" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="67" end1="73" start2="211" end2="227" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="74" end1="75" start2="228" end2="229" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="85" end1="92" start2="239" end2="243" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="93" end1="94" start2="244" end2="250" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="106" end1="107" start2="262" end2="273" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="117" end1="118" start2="283" end2="284" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="119" end1="120" start2="285" end2="287" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="121" end1="121" start2="288" end2="289" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="135" end1="136" start2="303" end2="304" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="137" end1="168" start2="305" end2="313" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="171" end1="172" start2="316" end2="317" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="173" end1="174" start2="318" end2="337" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="175" end1="176" start2="338" end2="338" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="193" end1="193" start2="355" end2="399" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="200" end1="205" start2="406" end2="414" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="206" end1="208" start2="415" end2="417" changelist="43352558-03b7-42f9-bea0-2243e05e2fd9" />
+        <range start1="209" end1="209" start2="418" end2="464" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="210" end1="210" start2="465" end2="715" changelist="43352558-03b7-42f9-bea0-2243e05e2fd9" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/html/view/fragments/answer.ejs">
+      <ranges>
+        <range start1="4" end1="5" start2="4" end2="5" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="8" end1="8" start2="8" end2="57" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="11" end1="13" start2="60" end2="64" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="16" end1="19" start2="67" end2="77" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="21" end1="22" start2="79" end2="80" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="25" end1="29" start2="83" end2="87" changelist="43352558-03b7-42f9-bea0-2243e05e2fd9" />
+        <range start1="31" end1="35" start2="89" end2="93" changelist="43352558-03b7-42f9-bea0-2243e05e2fd9" />
+        <range start1="37" end1="41" start2="95" end2="104" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="45" end1="45" start2="108" end2="117" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="48" end1="48" start2="120" end2="121" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/mongo.js">
+      <ranges>
+        <range start1="1" end1="1" start2="1" end2="2" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="3" end1="4" start2="4" end2="8" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="6" end1="6" start2="10" end2="11" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="44" end1="44" start2="49" end2="73" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="47" end1="48" start2="76" end2="77" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="54" end1="55" start2="83" end2="85" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="76" end1="76" start2="106" end2="124" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="78" end1="80" start2="126" end2="128" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="81" end1="82" start2="129" end2="134" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="84" end1="84" start2="136" end2="159" changelist="43352558-03b7-42f9-bea0-2243e05e2fd9" />
+        <range start1="96" end1="96" start2="171" end2="206" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="99" end1="100" start2="209" end2="210" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="103" end1="103" start2="213" end2="214" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="104" end1="107" start2="215" end2="219" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="115" end1="117" start2="227" end2="234" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="124" end1="125" start2="241" end2="295" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="126" end1="126" start2="296" end2="333" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="141" end1="147" start2="348" end2="349" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="150" end1="150" start2="352" end2="464" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="154" end1="154" start2="468" end2="470" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="155" end1="155" start2="471" end2="472" changelist="43352558-03b7-42f9-bea0-2243e05e2fd9" />
+        <range start1="156" end1="156" start2="473" end2="476" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="158" end1="159" start2="478" end2="493" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
       </ranges>
     </file>
   </component>
@@ -103,25 +147,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/User/Documents/.GOGI",
-    "list.type.of.created.stylesheet": "CSS",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "io.unthrottled.amii.config.ui.PluginSettingsUI",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/Documents/.DENSAULYQ&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;io.unthrottled.amii.config.ui.PluginSettingsUI&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Documents\.GOGI\html\view\fragments\chat" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\Documents\.GOGI\html\view\fragments\chat" />
+      <recent name="C:\Users\User\Documents\.GOGI\html\view\fragments" />
       <recent name="C:\Users\User\Documents\.GOGI\database" />
       <recent name="C:\Users\User\Documents\.GOGI\sketches" />
       <recent name="C:\Users\User\Documents\.GOGI\html\view" />
-      <recent name="C:\Users\User\Documents\.GOGI\html\style" />
     </key>
   </component>
   <component name="RunManager">
@@ -142,6 +191,21 @@
       <workItem from="1652977136186" duration="3186000" />
       <workItem from="1652981969454" duration="8503000" />
       <workItem from="1653133320604" duration="6076000" />
+      <workItem from="1653284585817" duration="661000" />
+      <workItem from="1653399843311" duration="1747000" />
+      <workItem from="1653404187883" duration="36000" />
+      <workItem from="1653461784676" duration="7425000" />
+      <workItem from="1653469718417" duration="5542000" />
+      <workItem from="1653481593475" duration="2334000" />
+      <workItem from="1653484030614" duration="3070000" />
+      <workItem from="1653542489903" duration="38222000" />
+      <workItem from="1653591418377" duration="324000" />
+      <workItem from="1653653739179" duration="13490000" />
+      <workItem from="1653733868744" duration="13019000" />
+      <workItem from="1653749331756" duration="6220000" />
+      <workItem from="1653777736091" duration="13317000" />
+      <workItem from="1653793297239" duration="975000" />
+      <workItem from="1653794408039" duration="22719000" />
     </task>
     <servers />
   </component>

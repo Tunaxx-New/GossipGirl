@@ -6,6 +6,10 @@ var userSchema = new mongoose.Schema
         {
             type: String
         },
+    name:
+        {
+            type: String
+        },
     password:
         {
             type: String
@@ -21,6 +25,29 @@ var userSchema = new mongoose.Schema
     time:
         {
             type: String
+        },
+    avatarExtension:
+        {
+            type: String,
+            default: '.png'
+        },
+    city:
+        {
+            type: String,
+            default: ''
+        },
+    barcode:
+        {
+            type: String
+        },
+    isConfirmedEmail:
+        {
+            type: Boolean,
+            default: false
+        },
+    friends:
+        {
+            type: Array
         }
 })
 
