@@ -1,5 +1,5 @@
 const fs      = require('fs')
-const urlAvatars = __dirname + '\\html\\icons\\avatars\\'
+const urlAvatars = __dirname + '/html/icons/avatars/'
 
 function checkImage(filename)
 {
