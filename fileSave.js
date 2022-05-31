@@ -2,7 +2,7 @@ const multer = require("multer")
 const path = require("path");
 
 const imageStorage = multer.diskStorage({
-    destination:  __dirname + '\\html\\icons\\avatars',
+    destination:  __dirname + '/html/icons/avatars',
     filename: (req, file, cb) => {
         cb(null, req.cookies.login + path.extname(file.originalname))
     }
