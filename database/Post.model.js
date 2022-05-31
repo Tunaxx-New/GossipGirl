@@ -18,6 +18,10 @@ var postSchema = new mongoose.Schema
             {
                 type: String
             },
+        realTime:
+            {
+              type: String
+            },
         topic:
             {
                 type: String,

@@ -2,7 +2,8 @@ const mongoose  = require('mongoose')
 const utils     = require('./utils.js')
 const validator = require('./database/validator.js')
 
-const uri = "mongodb://127.0.0.1:27017/GossipGirl"
+//mongodb+srv://gg:wp@cluster0.2qhvm.mongodb.net/GossipGirl?retryWrites=true&w=majority
+const uri = "mongodb+srv://gg:wp@cluster0.2qhvm.mongodb.net/GossipGirl?retryWrites=true&w=majority"
 let db
 
 mongoose.connect(uri, { useNewUrlParser: true }, err => {
@@ -132,6 +133,13 @@ async function createUser(body)
     user.time = time
     user.email = body.email
     user.barcode = body.barcode
+    user.socials = {
+        vk: '',
+        github: '',
+        instagram: '',
+        twitter: '',
+        telegram: ''
+    }
     user.save().then()
 }
 
@@ -207,16 +215,25 @@ async function getPostsByMany(keys, values) {
 //
 // Creates new post
 // @return 0
-function createPost(user, password, data)
+async function createPost(user, password, data)
 {
     let post = new Post()
     let date = new Date
     let time = date.getSeconds() + ':' + date.getMinutes() + ':' + date.getHours() + ':' + date.getDate() + ':' + (date.getMonth() + 1) + ':' + date.getFullYear()
     post.user = user
-    post.title = data.title
+
+    const topics = await getTopics()
+    if (topics.list.includes(data.topic)) {
+        post.topic = data.topic
+    } else {
+        post.topic = 'All topics'
+    }
+
     post.src = data.src
     post.link = data.url
     post.time = time
+    post.title = data.title
+    post.realTime = time.split("").reverse().join("")
     post.save().then()
 }
 
@@ -264,6 +281,7 @@ async function createAnswer(data)
     answer.user = data.user
     answer.src = data.src
     answer.time = time
+    answer.realTime = time.split("").reverse().join("")
     answer.parent = data.parent
     answer.save().then()
 }
@@ -358,6 +376,7 @@ async function postActions(key, id) {
     if(key == 1) {
         Post.updateOne({_id: id}, {$set: {visible: true}}).then()
     } else {
+        Answer.deleteMany({postId: id}).then()
         Post.deleteOne({_id: id}).then()
     }
 }
@@ -389,6 +408,7 @@ async function setDLike(login, id, type, likeType) {
     let object
     if (type === 'post') {
         object = await getPostsBy('_id', id)
+        object = object[0]
         if (likeType === 'like') {
             if (object.dislikes.includes(login, 0)) {
                 Post.updateOne({_id: id}, { $pull: {dislikes: login} }).then((err) => {})
@@ -430,6 +450,9 @@ async function setDLike(login, id, type, likeType) {
 // Delete answer by admin
 //
 async function deleteAnswer(id) {
+    const anodes = await Answer.find({parent: id})
+    for (let i = 0; i < anodes.length; i++)
+        await deleteAnswer(anodes[i]._id)
     await Answer.deleteOne({_id: id}).then()
 }
 
@@ -440,15 +463,18 @@ async function friend(login, friend, command) {
     if (command === 'add') {
         if (!user.friends.find(e => e.login === friend)) {
             const date = new Date()
+            const frd = await getUserBy('login', friend)
             const obj = {
                 time: date.getTime(),
                 login: friend,
                 confirmed: false,
-                realFriend: false
+                realFriend: false,
+                avatarExtension: frd.avatarExtension
             }
             User.updateOne({login: login}, {$push: {friends: obj}}).then((err) => {})
             obj.login = login
             obj.confirmed = true
+            avatarExtension = user.avatarExtension
             User.updateOne({login: friend}, {$push: {friends: obj}}).then((err) => {})
         }
     } else if (command === 'show') {
@@ -462,6 +488,14 @@ async function friend(login, friend, command) {
     }
 }
 
+
+
+//
+// Update the social networks
+//
+async function changeSocialNetworks(changes, id){
+    await User.updateOne({_id: id}, {$set: {"socials.vk": changes.vk, "socials.github": changes.github, "socials.twitter": changes.twitter, "socials.instagram": changes.instagram, "socials.telegram": changes.telegram}}).then()
+}
 
 module.exports =
     {
@@ -490,5 +524,7 @@ module.exports =
         setDLike: setDLike,
         deleteAnswer: deleteAnswer,
 
-        friend: friend
+        friend: friend,
+
+        changeSocialNetworks:changeSocialNetworks
     }

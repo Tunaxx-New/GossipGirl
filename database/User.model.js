@@ -48,7 +48,35 @@ var userSchema = new mongoose.Schema
     friends:
         {
             type: Array
-        }
+        },
+    socials: {
+        type: Object,
+        vk:
+            {
+                type: String,
+                default: ""
+            },
+        github:
+            {
+                type: String,
+                default: ""
+            },
+        twitter:
+            {
+                type: String,
+                default: ""
+            },
+        instagram:
+            {
+                type: String,
+                default: ""
+            },
+        telegram:
+            {
+                type: String,
+                default: ""
+            }
+    }
 })
 
 mongoose.model("user", userSchema)

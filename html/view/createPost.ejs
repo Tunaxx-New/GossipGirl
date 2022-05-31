@@ -5,12 +5,14 @@
     <title>Create Post Page</title>
     <link rel="stylesheet" href="">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="./commonStyle.css" type="text/css" rel="stylesheet">
+
 </head>
 <body>
 
 <%-include('fragments/header.ejs');%>
 
-<div class="container" style="margin: auto!important; margin-top: 25%!important;">
+<div class="container" style="margin: auto!important;">
 
 
     <div class="col-md-8 col-md-offset-2" style="margin: auto!important;">
@@ -19,9 +21,9 @@
 
         <form action="/createPost" method="POST">
 
-            <select class="form-select" aria-label="All topics">
+            <select class="form-select" aria-label="All topics" name="topic">
                 <%for(var i = 0; i < topics.list.length; i++) {%>
-                <option value="<%=topics[i] %>"><%=topics.list[i] %></option>
+                <option value="<%=topics.list[i] %>"><%=topics.list[i] %></option>
                 <%}%>
             </select>
 
@@ -32,13 +34,13 @@
 
             <div class="form-group">
                 <label for="title">Link for a news <span class="require">*</span></label>
-                <input type="text" class="form-control" name="l"/>
+                <input type="text" class="form-control" name="link"/>
             </div>
 
 
             <div class="form-group">
                 <label for="description">Description<span class="require">*</span></label>
-                <textarea rows="5" class="form-control" name="description" required></textarea>
+                <textarea rows="5" class="form-control" name="src" required></textarea>
             </div>
 
             <div class="form-group">

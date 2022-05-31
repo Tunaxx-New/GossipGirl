@@ -54,12 +54,16 @@ app.get("/", async (req, res) =>
     let tst
     if (req.query.toast)
         tst = JSON.parse(req.query.toast)
+    if (news !== undefined)
+        for (let i = 0; i < news.length; i++)
+            news[i].slice(0, 256)
     res.render(path.join(__dirname, 'html', 'view', 'index'),
         {
             topics: topics,
             user: user,
             toast: tst,
             news: JSON.parse(news).results
+            //news: news.results
         })
 })
 
@@ -116,7 +120,7 @@ app.get("/register", (req, res) =>
 app.get("/getAnswers", async (req, res) =>
 {
   const postId = req.query.postId
-  const answers = await mongo.getAnswers(postId, req.query.parent)
+  let answers = await mongo.getAnswers(postId, req.query.parent)
   let isAdmin = false
   let show = false
   if (req.query.show)
@@ -127,13 +131,36 @@ app.get("/getAnswers", async (req, res) =>
   if (answers.length <= 0)
       res.send('no')
   else {
+      if (answers.length > 0)
+          switch (req.query.sort) {
+              //Up rating
+              case '0':
+                  answers = answers.sort((a, b) => ((a.likes.length - a.dislikes.length) < (b.likes.length - b.dislikes.length)) ? 1 : -1)
+                  break
+
+              //Down rating
+              case '1':
+                  answers = answers.sort((a, b) => ((a.likes.length - a.dislikes.length) > (b.likes.length - b.dislikes.length)) ? 1 : -1)
+                  break
+
+              //Old posts
+              case '2':
+                  answers = answers.sort((a, b) => (a.realTime.localeCompare(b.realTime) <= 0) ? 1 : -1)
+                  break
+
+              // New posts
+              case '3':
+                  answers = answers.sort((a, b) => (a.realTime.localeCompare(b.realTime) > 0) ? 1 : -1)
+                  break
+          }
       res.render(path.join(__dirname, 'html', 'view', 'fragments', 'answer'),
           {
               answers: answers,
               isAdmin: isAdmin,
               level: parseInt(req.query.level) + 1,
               show: show,
-              url: req.originalUrl
+              url: req.originalUrl,
+              sort: req.query.sort
           })
   }
 })
@@ -145,8 +172,34 @@ app.get("/getPost", async (req, res) =>
 {
     const index = req.query.index
     const topic = req.query.topic
+    let type = req.query.sort
+    if (type === undefined)
+        type = '0'
     if (topic === 'undf') {
         let post = await mongo.getPostsBy('_id', index)
+        if (post.length > 0)
+            switch (type) {
+                //Up rating
+                case '0':
+                    post = post.sort((a, b) => ((a.likes.length - a.dislikes.length) < (b.likes.length - b.dislikes.length)) ? 1 : -1)
+                    break
+
+                //Down rating
+                case '1':
+                    post = post.sort((a, b) => ((a.likes.length - a.dislikes.length) > (b.likes.length - b.dislikes.length)) ? 1 : -1)
+                    break
+
+                //Old posts
+                case '2':
+                    post = post.sort((a, b) => (a.realTime.localeCompare(b.realTime) <= 0) ? 1 : -1)
+                    break
+
+                // New posts
+                case '3':
+                    post = post.sort((a, b) => (a.realTime.localeCompare(b.realTime) > 0) ? 1 : -1)
+                    break
+            }
+
         let show = false
         if (req.query.show)
             show = req.query.show
@@ -157,7 +210,36 @@ app.get("/getPost", async (req, res) =>
                 show: show
             })
     } else {
-        const posts = await mongo.getPostsByMany(['topic', 'visible'], [topic, true])
+        let posts
+        if (topic === 'All topics') {
+            posts = await mongo.getPostsBy('visible', true)
+        } else {
+            posts = await mongo.getPostsByMany(['topic', 'visible'], [topic, true])
+        }
+
+        if (posts.length > 0)
+            switch (type) {
+                //Up rating
+                case '0':
+                    posts = posts.sort((a, b) => ((a.likes.length - a.dislikes.length) < (b.likes.length - b.dislikes.length)) ? 1 : -1)
+                    break
+
+                //Down rating
+                case '1':
+                    posts = posts.sort((a, b) => ((a.likes.length - a.dislikes.length) > (b.likes.length - b.dislikes.length)) ? 1 : -1)
+                    break
+
+                //Old posts
+                case '2':
+                    posts = posts.sort((a, b) => (a.realTime.localeCompare(b.realTime) <= 0) ? 1 : -1)
+                    break
+
+                // New posts
+                case '3':
+                    posts = posts.sort((a, b) => (a.realTime.localeCompare(b.realTime) > 0) ? 1 : -1)
+                    break
+            }
+
         let show = false
         if (req.query.show)
             show = req.query.show
@@ -183,7 +265,8 @@ app.get('/search', async (req, res) => {
     let tst
     if (req.query.toast)
         tst = JSON.parse(req.query.toast)
-    if (word !== '') {
+    if (word !== '' && posts !== undefined) {
+        console.log(posts)
         res.render(path.join(__dirname, 'html', 'view', 'index'),
             {
                 topics: topics,
@@ -286,7 +369,7 @@ app.post("/register", async (req, res) =>
   req.body.barcode = utils.generateBarcode()
   let error = await mongo.createUser(req.body)
   if (error == null) {
-    email.sendMail(req.body.email, req.body.barcode, req.body.login)
+    email.sendMail({email: req.body.email, barcode: req.body.barcode, login: req.body.login}, 0)
     res.redirect('login')
   } else {
     res.render(path.join(__dirname, 'html', 'view', 'error'),
@@ -361,11 +444,24 @@ app.get("/chat.css", (req, res) =>
 {
     res.sendFile(path.join(__dirname, 'html', 'style', 'chat.css'))
 })
+app.get("/commonStyle.css", (req, res) =>
+{
+    res.sendFile(path.join(__dirname, 'html', 'style', 'commonStyle.css'))
+})
+app.get("/colors.css", (req, res) =>
+{
+    res.sendFile(path.join(__dirname, 'html', 'style', 'colors.css'))
+})
 
 app.get('/header', async (req, res) => {
     res.render(path.join(__dirname, 'html', 'view', 'fragments', 'header'), {
         user: await mongo.getUser(req.cookies.login, req.cookies.password)
     })
+})
+
+app.get('/image', (req, res) => {
+    const pth = path.join(__dirname, 'html', 'icons', req.query.img)
+    res.sendFile(pth)
 })
 
 app.get("/avatar", async (req, res) =>
@@ -426,6 +522,23 @@ app.get('/adminList', async (req, res) => {
                 let users = await mongo.getUsersBy('isAdmin', 'false')
                 let id = Array.from(Array(users.length).keys())
                 users = users.slice(count * page, count * (page + 1))
+                switch (req.query.sort) {
+                    case 'city-':
+                        users = users.sort((a, b) => (a.city > b.city) ? 1 : -1)
+                        break
+
+                    case 'city*':
+                        users = users.sort((a, b) => (a.city < b.city) ? 1 : -1)
+                        break
+
+                    case 'name-':
+                        users = users.sort((a, b) => (a.login > b.login) ? 1 : -1)
+                        break
+
+                    case 'name*':
+                        users = users.sort((a, b) => (a.login < b.login) ? 1 : -1)
+                        break
+                }
                 id = id.slice(count * page, count * (page + 1))
                 res.render(path.join(__dirname, 'html', 'view', 'fragments', 'listUsers'), {
                     users: users,
@@ -438,6 +551,25 @@ app.get('/adminList', async (req, res) => {
                 let users = await mongo.getUsersBy('isAdmin', 'true')
                 let id = Array.from(Array(users.length).keys())
                 users = users.slice(count * page, count * (page + 1))
+
+                switch (req.query.sort) {
+                    case 'city-':
+                        users = users.sort((a, b) => (a.city > b.city) ? 1 : -1)
+                        break
+
+                    case 'city*':
+                        users = users.sort((a, b) => (a.city < b.city) ? 1 : -1)
+                        break
+
+                    case 'name-':
+                        users = users.sort((a, b) => (a.login > b.login) ? 1 : -1)
+                        break
+
+                    case 'name*':
+                        users = users.sort((a, b) => (a.login < b.login) ? 1 : -1)
+                        break
+                }
+
                 id = id.slice(count * page, count * (page + 1))
                 res.render(path.join(__dirname, 'html', 'view', 'fragments', 'listAdmins'), {
                     users: users,
@@ -450,6 +582,25 @@ app.get('/adminList', async (req, res) => {
                 let posts = await mongo.getSortedPosts('visible', 1)
                 let id = Array.from(Array(posts.length).keys())
                 posts = posts.slice(count * page, count * (page + 1))
+
+                switch (req.query.sort) {
+                    case 'city-':
+                        posts = posts.sort((a, b) => (a.realTime > b.realTime) ? 1 : -1)
+                        break
+
+                    case 'city*':
+                        posts = posts.sort((a, b) => (a.realTime < b.realTime) ? 1 : -1)
+                        break
+
+                    case 'name-':
+                        posts = posts.sort((a, b) => (a.user > b.user) ? 1 : -1)
+                        break
+
+                    case 'name*':
+                        posts = posts.sort((a, b) => (a.user < b.user) ? 1 : -1)
+                        break
+                }
+
                 id = id.slice(count * page, count * (page + 1))
                 res.render(path.join(__dirname, 'html', 'view', 'fragments', 'listPosts'), {
                     posts: posts,
@@ -490,7 +641,6 @@ app.get('/postAction', async (req, res) => {
         let actionType = req.query.key
         let id = req.query.postId
         await mongo.postActions(actionType, id)
-        console.log(req.originalUrl)
         res.redirect('back')
     }
 })
@@ -503,14 +653,17 @@ app.get('/postAction', async (req, res) => {
 app.post('/userAction', async (req, res) => {
     let actionType = req.body.key
     const user = await mongo.getUser(req.cookies.login, req.cookies.password)
-    if (user.isAdmin) {
-        if (actionType == 1) {
-            await mongo.createUserByAdmin(req.body)
-            res.redirect('back')
-        } else if (actionType == 2) {
+    if (user.title == null) {
+        if (actionType == 2) {
             let changes = req.body
             let id = req.body.Id
             await mongo.editUser(changes, id)
+            res.redirect('back')
+        }
+    }
+    if (user.isAdmin) {
+        if (actionType == 1) {
+            await mongo.createUserByAdmin(req.body)
             res.redirect('back')
         } else if (actionType == 3) {
             let id = req.body.Id
@@ -521,17 +674,50 @@ app.post('/userAction', async (req, res) => {
     }
 })
 
+app.post('/forgot', async (req, res) => {
+    const user = await mongo.getUserBy('email', req.body.email)
+    if (user !== undefined && user.isConfirmedEmail) {
+        email.sendMail({email: req.body.email, password: user.password}, 1)
+        res.redirect('back')
+    }
+    else {
+        const error = {
+            title: "Email not found or wasn't confirmed!",
+            message: ""
+        }
+        res.render(path.join(__dirname, 'html', 'view', 'error'),
+            {
+                error: error
+            })
+    }
+})
 
 //
 // User's Profile
 //
 app.get('/profile', async (req, res) => {
-    const user = await mongo.getUser(req.cookies.login, req.cookies.password)
+    let user = await mongo.getUsersBy('login', req.cookies.login)
+    user = user[0]
     if (user.title == null) {
-        res.render(path.join(__dirname, 'html', 'view', 'profile'),
-            {
-                user: user
-            })
+        if (user.password === req.cookies.password && req.query.login === undefined) {
+            res.render(path.join(__dirname, 'html', 'view', 'profile'),
+                {
+                    user: user
+                })
+        } else {
+            let friend = await mongo.getUsersBy('login', req.query.login)
+            friend = friend[0]
+            if (friend.title == null) {
+                res.render(path.join(__dirname, 'html', 'view', 'profileReadOnly'),
+                    {
+                        user: friend
+                    })
+            } else {
+                res.render(path.join(__dirname, 'html', 'view', 'error'), {
+                    error: user
+                })
+            }
+        }
     } else {
         res.render(path.join(__dirname, 'html', 'view', 'error'), {
             error: user
@@ -713,6 +899,16 @@ app.post('/chat', async (req, res) => {
     }
 })
 
+
+
+//
+// Change the social networks
+//
+app.get('/changeSocialNetworks', async (req, res) => {
+    const user = await mongo.getUser(req.cookies.login, req.cookies.password)
+    await mongo.changeSocialNetworks(req.query, user._id)
+    res.redirect('back')
+})
 
 //
 // Starting server

@@ -6,12 +6,19 @@
     <link rel="stylesheet" href="/admin">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link href="./commonStyle.css" type="text/css" rel="stylesheet">
 
 </head>
 <body>
 
 <script>
     var pages = [0, 0, 0]
+    var sort = '0'
+    var plusOrMinus = '*'
+    var CurrentCount = 10
+    var CurrentIframe = 'users'
+    var typE = 0
+
 
     window.addEventListener("load", function() {
         tabcloseall();
@@ -21,6 +28,26 @@
     function tab(id) {
         var tab = document.getElementById(id);
         var visibility = tab.style.visibility;
+
+        if (id === 'home') {
+            typE = '0'
+            CurrentIframe = 'usersIframe'
+            document.getElementById('bynames').innerHTML = 'Sort by names'
+            document.getElementById('bycity').innerHTML = 'Sort by city'
+        }
+        else if (id === 'menu1') {
+            typE = '1'
+            CurrentIframe = 'adminsIframe'
+            document.getElementById('bynames').innerHTML = 'Sort by names'
+            document.getElementById('bycity').innerHTML = 'Sort by city'
+        }
+        else if (id === 'menu2') {
+            typE = '2'
+            CurrentIframe = 'postsIframe'
+            document.getElementById('bynames').innerHTML = 'Sort by user'
+            document.getElementById('bycity').innerHTML = 'Sort by date'
+        }
+
         tabcloseall();
         if (visibility === "hidden" || visibility === "") {
             tab.style.visibility = "visible";
@@ -48,11 +75,27 @@
             pages[type] = 0
         }
         let count = getCountElement.value
+        if (count === undefined)
+            count = CurrentCount
         if (count < 0) {
             count = 0
             getCountElement.value = 0
         }
-        iframe.src = "/adminList?type=" + type + "&page=" + pages[type].toString() + "&count=" + count.toString()
+
+        iframe.src = "/adminList?type=" + type + "&page=" + pages[type].toString() + "&count=" + count.toString() + "&sort=" + sort
+        CurrentIframe = count
+        typE = type
+        CurrentIframe = iframe.id
+    }
+
+    function changeSort(value) {
+        sort = value + plusOrMinus
+        if (plusOrMinus === '-')
+            plusOrMinus = '*'
+        else
+            plusOrMinus = '-'
+        console.log(CurrentIframe)
+        refreshIframe(typE, document.getElementById(CurrentIframe), CurrentCount, 0)
     }
 </script>
 
@@ -70,11 +113,9 @@
         <div class="card">
             <div class="card-body">
                 <div class="d-flex flex-column align-items-center text-center">
-                    <img src="/avatar?src=<%=user.login%>&ext=<%=user.avatarExtension%>" alt="Admin" class="rounded-circle" width="150">
+                    <img src="/avatar?src=<%=user.login%>&ext=<%=user.avatarExtension%>" alt="Admin" class="rounded-circle avatar-large" width="150">
                     <div class="mt-3">
                         <h4><%=user.login%></h4>
-                        <button class="btn btn-primary">Sort by Names</button>
-                        <button class="btn btn-primary">Sort by Cities</button>
                     </div>
                 </div>
             </div>
@@ -109,13 +150,17 @@
     <div class="col">
 
         <div style="position: absolute;" class="taby">
+            <div class="mt-3">
+                <button id="bynames" class="btn btn-primary" onclick="changeSort('name')">Sort by names</button>
+                <button id="bycity" class="btn btn-primary" onclick="changeSort('city')">Sort by cities</button>
+            </div>
             <div id="home" class="divIframe" style="position: absolute!important;">
                 <input onchange="refreshIframe(0, this.parentNode.getElementsByTagName('iframe')[0], this.parentNode.getElementsByTagName('input')[0], 0);" value="10" type="number">
                 <span>
                     <button onclick="refreshIframe(0, this.parentNode.parentNode.getElementsByTagName('iframe')[0], this.parentNode.parentNode.getElementsByTagName('input')[0], -1);"><</button>
                     <button onclick="refreshIframe(0, this.parentNode.parentNode.getElementsByTagName('iframe')[0], this.parentNode.parentNode.getElementsByTagName('input')[0], 1);">></button>
                 </span>
-                <iframe></iframe>
+                <iframe id="usersIframe"></iframe>
                 <script>refreshIframe(0, document.currentScript.parentNode.getElementsByTagName('iframe')[0], document.currentScript.parentNode.getElementsByTagName('input')[0], 0);</script>
             </div>
 
@@ -125,7 +170,7 @@
                     <button onclick="refreshIframe(1, this.parentNode.parentNode.getElementsByTagName('iframe')[0], this.parentNode.parentNode.getElementsByTagName('input')[0], -1);"><</button>
                     <button onclick="refreshIframe(1, this.parentNode.parentNode.getElementsByTagName('iframe')[0], this.parentNode.parentNode.getElementsByTagName('input')[0], 1);">></button>
                 </span><br>
-                <iframe></iframe>
+                <iframe id="adminsIframe"></iframe>
                 <script>refreshIframe(1, document.currentScript.parentNode.getElementsByTagName('iframe')[0], document.currentScript.parentNode.getElementsByTagName('input')[0], 0);</script>
             </div>
 
@@ -135,7 +180,7 @@
                     <button onclick="refreshIframe(2, this.parentNode.parentNode.getElementsByTagName('iframe')[0], this.parentNode.parentNode.getElementsByTagName('input')[0], -1);"><</button>
                     <button onclick="refreshIframe(2, this.parentNode.parentNode.getElementsByTagName('iframe')[0], this.parentNode.parentNode.getElementsByTagName('input')[0], 1);">></button>
                 </span>
-                <iframe></iframe>
+                <iframe id="postsIframe"></iframe>
                 <script>refreshIframe(2, document.currentScript.parentNode.getElementsByTagName('iframe')[0], document.currentScript.parentNode.getElementsByTagName('input')[0], 0);</script>
             </div>
         </div>
@@ -156,5 +201,8 @@
     const iframes = document.getElementsByTagName('iframe')
     for (let i = 0; i < iframes.length; i++)
         resizeIframe(iframes[i])
+
+    typE = 0
+    CurrentIframe = 'usersIframe'
 </script>
 </body>

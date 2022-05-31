@@ -1,0 +1,10 @@
+@import "colors.css";
+
+button {
+    background-color: var(--primary)!important;
+    color: var(--dark)!important;
+    font-family: 'Manrope', sans-serif;
+    border-color: black!important;
+    box-shadow: none!important;
+}
+

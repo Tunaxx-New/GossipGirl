@@ -24,6 +24,10 @@ var answerSchema = mongoose.Schema
         {
             type: String
         },
+    realTime:
+        {
+            type: String
+        },
     timeAgo:
         {
             type: String

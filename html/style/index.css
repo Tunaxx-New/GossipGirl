@@ -4,8 +4,12 @@
 
 .footer {
     flex: 0 0 auto;
-    background-color: grey;
+    background-color: var(--dark-s);
     margin-top: 32px!important;
+}
+
+.company-div {
+    border-top: 1px solid var(--dark);
 }
 
 .proper_comment_margin {
@@ -71,7 +75,6 @@
 }
 
 .comment {
-  background-color: #f7f7f7;
   width: 100%;
   padding: 8px;
 }
@@ -81,24 +84,66 @@
   border-color: pink!important
 }
 
+input {
+    box-shadow: 0 0 0 var(--pink);
+    border: 1px solid var(--black) !important;
+    height: 40px;
+}
+input:hover, input:focus, input:active {
+    box-shadow: 0 0 0 5px var(--pink)!important;
+    border: 1px solid var(--pink) !important;
+}
+
 .btn-outline-success {
   margin-right: 2%;
+    box-shadow: none!important;
+    border-color: var(--black)!important;
+    color: black!important;
+    height: 40px;
+}
+.btn-outline-success:hover, .btn-outline-success:focus, .btn-outline-success:active {
+    box-shadow: 0 0 0 5px var(--pink)!important;
+    border: 1px solid var(--pink) !important;
+    color: black!important;
+    background-color: var(--pink)!important;
 }
 
 .btn-outline-info {
   color: black!important;
 }
 
-.btn-outline-warning {
+.btn-outline-secondary {
   color: black!important;
-  border-color: #FF1271!important;
+  border-color: var(--pink)!important;
 }
 
-.btn-outline-warning:hover, .btn-outline-warning:focus, .btn-outline-warning:active {
+.btn-secondary {
+    box-shadow: none!important;
+    border-color: var(--pink)!important;
+    color: black!important;
+    width: 50%;
+    height: 40px;
+}
+
+.btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active {
    color: black!important;
-   background-color: #FF1271!important;
-   border-color: #FF1271!important;
-   box-shadow: 0 0 0 5px rgba(255, 18, 113, 1)!important;
+   background-color: var(--pink)!important;
+   border-color: var(--pink)!important;
+   box-shadow: 0 0 0 5px var(--pink)!important;
+}
+
+.btn-primary {
+    box-shadow: 0 0 0 5px var(--pink)!important;
+    border-color: var(--pink)!important;
+    color: black!important;
+    background-color: var(--pink)!important;
+    width: 50%;
+}
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+    color: black!important;
+    background-color: var(--pink)!important;
+    border-color: var(--pink)!important;
+    box-shadow: 0 0 0 5px var(--pink)!important;
 }
 
 .btn-outline-primary {
@@ -127,9 +172,6 @@
     font-size: 32px;
 }
 
-iframe {
-    border-left: 6px solid green;
-}
 #posts iframe {
     border: none!important;
 }
@@ -196,9 +238,21 @@ p {
     margin-bottom: 0!important;
 }
 
+.hci {
+    z-index: 100000!important;
+    margin: 8px;
+}
+
+.float-down {
+    position:absolute;
+    bottom:0;
+}
+
 .media {
     background-color: white!important;
     margin-left: 8px!important;
+    margin-bottom: 0!important;
+    margin-top: 0!important;
     box-shadow: 0 3px 0 #000;
 }
 .news-image {
@@ -218,9 +272,83 @@ p {
     width: 50%;
     height: 75%;
 }
+.chatBox-nav {
+    position: fixed;
+    right: 16px;
+    bottom: 0;
+    width: 50%;
+}
 .chatFrame {
     width: 100%;
     position: absolute;
     bottom: 0;
     height: 100% !important;
+}
+
+.text-center {
+    text-align: center;
+    vertical-align: middle;
+}
+.text-center i {
+    line-height: 1.5;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.margin-auto {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    text-align:center;
+}
+
+.chatIframe {
+    z-index: -1000;
+}
+
+.navbar-toggler {
+    -webkit-animation-fill-mode: forwards; /* Chrome 16+, Safari 4+ */
+    -moz-animation-fill-mode: forwards;    /* FF 5+ */
+    -o-animation-fill-mode: forwards;      /* Not implemented yet */
+    -ms-animation-fill-mode: forwards;     /* IE 10+ */
+    animation-fill-mode: forwards;         /* When the spec is finished */
+    animation-name: fadeIn;
+    animation-duration: 0.5s;
+}
+.navbar-toggler:hover {
+    animation-name: fadeOut;
+    animation-duration: 0.5s;
+}
+@keyframes fadeOut {
+    from {opacity: 0.8;}
+    to {opacity: 1;}
+}
+@keyframes fadeIn {
+    from {opacity: 1;}
+    to {opacity: 0.8;}
+}
+
+.section-small {
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 16px;
+    padding: 16px;
+    border-radius: 4px;
+    border: 1px solid var(--dark);
+}
+.section-normal {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.form-check-input {
+    background-size: 120px auto!important;
+    width: 64px!important;
+    height: 64px!important;
+}
+.form-check-input:checked {
+    background-color: var(--pink)!important;
+}
+.small-radio {
+    width: 32px!important;
+    height: 32px!important;
 }
