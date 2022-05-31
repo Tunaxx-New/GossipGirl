@@ -5,8 +5,8 @@ function getChat(login, friend)
 {
     let file1 = './chat/' + friend + login + '.txt'
     let file2 = './chat/' + login + friend + '.txt'
-    let fileOpen1 = __dirname + '\\chat\\' + friend + login + '.txt'
-    let fileOpen2 = __dirname + '\\chat\\' + login + friend + '.txt'
+    let fileOpen1 = __dirname + '/chat/' + friend + login + '.txt'
+    let fileOpen2 = __dirname + '/chat/' + login + friend + '.txt'
     try
     {
         if (!fs.existsSync(fileOpen1)) {
@@ -29,8 +29,8 @@ function getChat(login, friend)
 
 function sendMessage(login, friend, src)
 {
-    let fileOpen1 = __dirname + '\\chat\\' + friend + login + '.txt'
-    let fileOpen2 = __dirname + '\\chat\\' + login + friend + '.txt'
+    let fileOpen1 = __dirname + '/chat/' + friend + login + '.txt'
+    let fileOpen2 = __dirname + '/chat/' + login + friend + '.txt'
     try
     {
         if (!fs.existsSync(fileOpen1)) {
@@ -58,7 +58,7 @@ function sendMessage(login, friend, src)
 
 function deleteChat(login, friend)
 {
-    let fileOpen = __dirname + '\\chat\\' + uname + client + '.txt'
+    let fileOpen = __dirname + '/chat/' + uname + client + '.txt'
     try {
         fs.unlinkSync(fileOpen)
     } catch (e) {

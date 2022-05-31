@@ -781,7 +781,7 @@ app.get('/chat', async (req, res) => {
             friends: user.friends
         })
     } else {
-        res.redirect('back')
+        res.send('Please login')
     }
 })
 
