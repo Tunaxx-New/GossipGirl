@@ -57,6 +57,9 @@ app.get("/", async (req, res) =>
     if (news !== undefined)
         for (let i = 0; i < news.length; i++)
             news[i].slice(0, 256)
+    if (user.title === undefined)
+        await mongo.changeUser(req.cookies.login, 'online', true)
+    user.online = true
     res.render(path.join(__dirname, 'html', 'view', 'index'),
         {
             topics: topics,
@@ -266,7 +269,6 @@ app.get('/search', async (req, res) => {
     if (req.query.toast)
         tst = JSON.parse(req.query.toast)
     if (word !== '' && posts !== undefined) {
-        console.log(posts)
         res.render(path.join(__dirname, 'html', 'view', 'index'),
             {
                 topics: topics,
@@ -343,6 +345,7 @@ app.post("/login", async (req, res) =>
   {
     res.cookie('login', user.login)
     res.cookie('password', user.password)
+    await mongo.changeUser(req.body.uname, 'online', true)
     if (user.isConfirmedEmail) {
         res.redirect('/')
     } else {
@@ -698,11 +701,23 @@ app.post('/forgot', async (req, res) => {
 app.get('/profile', async (req, res) => {
     let user = await mongo.getUsersBy('login', req.cookies.login)
     user = user[0]
-    if (user.title == null) {
+    if (user !== undefined && user.title == null) {
         if (user.password === req.cookies.password && req.query.login === undefined) {
+            await mongo.changeUser(req.cookies.login, 'online', true)
+            user.online = true
+            let fOnlines = []
+            for (let i = 0; i < user.friends.length; i++) {
+                const friend = await mongo.getUsersBy('login', user.friends[i].login)
+                if (friend[0].online) {
+                    fOnlines.push(true)
+                } else {
+                    fOnlines.push(false)
+                }
+            }
             res.render(path.join(__dirname, 'html', 'view', 'profile'),
                 {
-                    user: user
+                    user: user,
+                    fOnlines: fOnlines
                 })
         } else {
             let friend = await mongo.getUsersBy('login', req.query.login)
@@ -719,6 +734,11 @@ app.get('/profile', async (req, res) => {
             }
         }
     } else {
+        if (user === undefined)
+            user = {
+                title: "Unknown user",
+                message: "Please login!"
+            }
         res.render(path.join(__dirname, 'html', 'view', 'error'), {
             error: user
         })
@@ -747,10 +767,11 @@ app.post('/deleteFriend', async (req, res) => {
 //
 // Sign out
 //
-app.get('/signout', (req, res) =>
+app.get('/signout', async (req, res) =>
 {
     res.cookie('login', -1)
     res.cookie('password', -1)
+    mongo.changeUser(req.cookies.login, 'online', false)
     res.redirect('/')
 })
 
@@ -908,6 +929,15 @@ app.get('/changeSocialNetworks', async (req, res) => {
     const user = await mongo.getUser(req.cookies.login, req.cookies.password)
     await mongo.changeSocialNetworks(req.query, user._id)
     res.redirect('back')
+})
+
+app.get('/exit', async(req, res) => {
+    const user = await mongo.getUser(req.cookies.login, req.cookies.password)
+    if (user.title == null) {
+        mongo.changeUser(req.cookies.login, 'online', false)
+    } else {
+        res.send('nologin')
+    }
 })
 
 //

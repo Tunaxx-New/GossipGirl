@@ -76,7 +76,12 @@ var userSchema = new mongoose.Schema
                 type: String,
                 default: ""
             }
-    }
+    },
+    online:
+        {
+            type: Boolean,
+            default: false
+        }
 })
 
 mongoose.model("user", userSchema)

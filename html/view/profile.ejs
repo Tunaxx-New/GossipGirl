@@ -18,6 +18,11 @@
             <div class="card-body">
                 <div class="d-flex flex-column align-items-center text-center">
                     <img src="/avatar?src=<%=user.login%>&ext=<%=user.avatarExtension%>" alt="Admin" class="rounded-circle avatar-large" width="150">
+                    <% if (user.online) { %>
+                        <p class="online-circle-large" style="width: 100%; margin:auto; text-align: center"><i class="fa-solid fa-circle" style="color: greenyellow"></i></p>
+                    <% } else { %>
+                        <p class="online-circle-large" style="width: 100%; margin:auto; text-align: center"><i class="fa-solid fa-circle" style="color: grey"></i></p>
+                    <% } %>
                     <div class="mt-3">
                         <h4><%= user.login%></h4>
                         <p class="text-secondary mb-1"><%= user.city%></p>
@@ -101,7 +106,15 @@
     <% if (user.friends[i].confirmed) { %>
     <tr>
         <td></td>
-        <td class="align-middle"><a href="profile?login=<%=user.friends[i].login%>"><img class="avatar" src="/avatar?src=<%=user.friends[i].login%>&ext=<%=user.friends[i].avatarExtension%>" alt="mdo"></a></td>
+        <td class="align-middle" style="text-align: right">
+            <a href="profile?login=<%=user.friends[i].login%>">
+                <img style="margin-right: 16px;" class="avatar" src="/avatar?src=<%=user.friends[i].login%>&ext=<%=user.friends[i].avatarExtension%>" alt="mdo">
+                <% if (typeof(user.friends[i]) !== undefined && fOnlines[i]) { %>
+                    <p class="online-circle" style="width: 100%; text-align: right"><i class="fa-solid fa-circle" style="color: greenyellow"></i></p>
+                <% } else { %>
+                    <p class="online-circle" style="width: 100%; text-align: right"><i class="fa-solid fa-circle" style="color: grey"></i></p>
+                <% } %>
+            </a></td>
         <th class="align-middle">
             <div><%=user.friends[i].login%></div>
             <div><%=user.friends[i].realFriend%></div>
