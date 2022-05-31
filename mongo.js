@@ -4,7 +4,7 @@ const validator = require('./database/validator.js')
 
 //mongodb+srv://gg:wp@cluster0.2qhvm.mongodb.net/GossipGirl?retryWrites=true&w=majority
 //mongodb://127.0.0.1:27017/GossipGirl
-const uri = "mongodb://127.0.0.1:27017/GossipGirl"
+const uri = "mongodb+srv://gg:wp@cluster0.2qhvm.mongodb.net/GossipGirl?retryWrites=true&w=majority"
 let db
 
 mongoose.connect(uri, { useNewUrlParser: true }, err => {
