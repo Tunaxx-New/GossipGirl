@@ -4,7 +4,7 @@ const validator = require('./database/validator.js')
 
 //mongodb+srv://gg:wp@cluster0.2qhvm.mongodb.net/GossipGirl?retryWrites=true&w=majority
 //mongodb://127.0.0.1:27017/GossipGirl
-const uri = "mongodb://127.0.0.1:27017/GossipGirl"
+const uri = "mongodb+srv://gg:wp@cluster0.2qhvm.mongodb.net/GossipGirl?retryWrites=true&w=majority"
 let db
 
 mongoose.connect(uri, { useNewUrlParser: true }, err => {
@@ -184,7 +184,14 @@ async function getPosts() {
 async function getPostsBy(key, value) {
     var query = {}
     query[key] = value
-    return await Post.find(query)
+
+    const posts = await Post.find(query)
+    const date = new Date()
+    let current = date.getSeconds() + ':' + date.getMinutes() + ':' + date.getHours() + ':' + date.getDate() + ':' + (date.getMonth() + 1) + ':' + date.getFullYear()
+    for (let i = 0; i < posts.length; i++)
+        changePost({ _id: posts[i]._id }, { deltaTime: utils.deltaTime(current, posts[i].time) })
+
+    return posts
 }
 
 
@@ -216,12 +223,15 @@ async function getPostsByMany(keys, values) {
 //
 // Creates new post
 // @return 0
-async function createPost(user, password, data)
+async function createPost(user, password, data, user)
 {
     let post = new Post()
     let date = new Date
     let time = date.getSeconds() + ':' + date.getMinutes() + ':' + date.getHours() + ':' + date.getDate() + ':' + (date.getMonth() + 1) + ':' + date.getFullYear()
-    post.user = user
+    post.user = {
+        login: user.login,
+        extname: user.avatarExtension
+    }
 
     const topics = await getTopics()
     if (topics.list.includes(data.topic)) {

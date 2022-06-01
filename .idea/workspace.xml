@@ -2,21 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c635121-aa8d-41e8-9200-ae9916672b50" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/html/style/Login_RegistrationPage.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/Tunaxx1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/chat/Tunaxx1.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/Post.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/database/Post.model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fileSave.js" beforeDir="false" afterPath="$PROJECT_DIR$/fileSave.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/style/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/style/admin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/style/error.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/style/error.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/view/createPost.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/html/view/createPost.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/view/error.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/html/view/error.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/view/fragments/listPosts.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/html/view/fragments/listPosts.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/style/chat.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/style/chat.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/style/colors.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/style/colors.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/style/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/style/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/style/post.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/style/post.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/view/admin.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/html/view/admin.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/view/fragments/answer.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/html/view/fragments/answer.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/view/fragments/chat/chat.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/html/view/fragments/chat/chat.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/view/fragments/chat/subchat.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/html/view/fragments/chat/subchat.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/view/fragments/header.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/html/view/fragments/header.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/view/fragments/post.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/html/view/fragments/post.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/view/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/html/view/index.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mongo.js" beforeDir="false" afterPath="$PROJECT_DIR$/mongo.js" afterDir="false" />
     </list>
-    <list id="a88e998b-611a-40e6-81fa-b26a02ef1f18" name="Changes by Ecl1ps0" comment="">
-      <change beforePath="$PROJECT_DIR$/html/style/register.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/style/register.css" afterDir="false" />
+    <list id="957438d9-8f03-49c6-84fc-5aa4b008ee00" name="Changes by Ecl1ps0" comment="">
+      <change beforePath="$PROJECT_DIR$/html/Login_RegistrationPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/Login_RegistrationPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/style/Login_RegistrationPage.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/style/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/style/admin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/style/commonStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/style/commonStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/view/admin.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/html/view/admin.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/view/createPost.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/html/view/createPost.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/view/fragments/chat/subchat.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/html/view/fragments/chat/subchat.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/view/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/html/view/index.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mongo.js" beforeDir="false" afterPath="$PROJECT_DIR$/mongo.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,17 +51,67 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/mongo.js">
+      <ranges>
+        <range start1="6" end1="7" start2="6" end2="7" changelist="957438d9-8f03-49c6-84fc-5aa4b008ee00" />
+        <range start1="186" end1="187" start2="186" end2="194" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="218" end1="219" start2="225" end2="226" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="223" end1="224" start2="230" end2="234" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/html/view/fragments/chat/subchat.ejs">
+      <ranges>
+        <range start1="8" end1="8" start2="8" end2="9" changelist="957438d9-8f03-49c6-84fc-5aa4b008ee00" />
+        <range start1="11" end1="12" start2="12" end2="15" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="16" end1="21" start2="19" end2="26" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="22" end1="22" start2="27" end2="28" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="35" end1="36" start2="41" end2="42" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="41" end1="43" start2="47" end2="58" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="45" end1="46" start2="60" end2="62" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+      </ranges>
+    </file>
     <file path="$PROJECT_DIR$/index.js">
       <ranges>
-        <range start1="11" end1="12" start2="11" end2="12" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
-        <range start1="116" end1="116" start2="116" end2="130" changelist="a88e998b-611a-40e6-81fa-b26a02ef1f18" />
-        <range start1="326" end1="328" start2="340" end2="347" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
-        <range start1="336" end1="336" start2="355" end2="389" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
-        <range start1="337" end1="338" start2="390" end2="398" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
-        <range start1="453" end1="453" start2="513" end2="517" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
-        <range start1="496" end1="497" start2="560" end2="564" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
-        <range start1="908" end1="921" start2="975" end2="975" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
-        <range start1="937" end1="937" start2="991" end2="992" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="24" end1="25" start2="24" end2="26" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="67" end1="69" start2="68" end2="70" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="108" end1="109" start2="109" end2="110" changelist="957438d9-8f03-49c6-84fc-5aa4b008ee00" />
+        <range start1="115" end1="116" start2="116" end2="117" changelist="957438d9-8f03-49c6-84fc-5aa4b008ee00" />
+        <range start1="122" end1="123" start2="123" end2="124" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="126" end1="127" start2="127" end2="132" changelist="957438d9-8f03-49c6-84fc-5aa4b008ee00" />
+        <range start1="128" end1="129" start2="133" end2="134" changelist="957438d9-8f03-49c6-84fc-5aa4b008ee00" />
+        <range start1="290" end1="291" start2="295" end2="296" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="299" end1="300" start2="304" end2="305" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="340" end1="341" start2="345" end2="346" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="361" end1="362" start2="366" end2="367" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="777" end1="778" start2="782" end2="783" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="791" end1="792" start2="796" end2="797" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="902" end1="903" start2="907" end2="909" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/html/view/admin.ejs">
+      <ranges>
+        <range start1="126" end1="127" start2="126" end2="127" changelist="957438d9-8f03-49c6-84fc-5aa4b008ee00" />
+        <range start1="129" end1="130" start2="129" end2="130" changelist="957438d9-8f03-49c6-84fc-5aa4b008ee00" />
+        <range start1="132" end1="133" start2="132" end2="133" changelist="957438d9-8f03-49c6-84fc-5aa4b008ee00" />
+        <range start1="135" end1="136" start2="135" end2="136" changelist="957438d9-8f03-49c6-84fc-5aa4b008ee00" />
+        <range start1="149" end1="150" start2="149" end2="150" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+      </ranges>
+    </file>
+    <file path="$PROJECT_DIR$/html/view/index.ejs">
+      <ranges>
+        <range start1="31" end1="32" start2="31" end2="32" changelist="957438d9-8f03-49c6-84fc-5aa4b008ee00" />
+        <range start1="72" end1="73" start2="72" end2="73" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="100" end1="100" start2="100" end2="101" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="101" end1="102" start2="102" end2="102" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="106" end1="106" start2="106" end2="109" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="129" end1="132" start2="132" end2="132" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="138" end1="140" start2="138" end2="139" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="242" end1="243" start2="241" end2="242" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="258" end1="259" start2="257" end2="258" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="274" end1="274" start2="273" end2="274" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="277" end1="280" start2="277" end2="306" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="282" end1="284" start2="308" end2="309" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
+        <range start1="285" end1="288" start2="310" end2="311" changelist="1c635121-aa8d-41e8-9200-ae9916672b50" />
       </ranges>
     </file>
   </component>
@@ -59,20 +123,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "last_opened_file_path": "C:/Users/User/Documents/.GOGI/html/view",
-    "list.type.of.created.stylesheet": "SCSS",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "io.unthrottled.amii.config.ui.PluginSettingsUI",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/Documents/.GOGI/html/view&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;SCSS&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;io.unthrottled.amii.config.ui.PluginSettingsUI&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\User\Documents\.GOGI\html\view" />
@@ -91,11 +155,15 @@
     <configuration name="PageNotFound.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/.GOGI/html/PageNotFound.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
+    <configuration name="newchat.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/.GOGI/html/view/fragments/chat/newchat.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration name="server" type="NodeJSConfigurationType" path-to-js-file="index.js" working-dir="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.newchat.html" />
         <item itemvalue="JavaScript Debug.PageNotFound.html" />
       </list>
     </recent_temporary>
@@ -132,7 +200,8 @@
       <workItem from="1653908086035" duration="18298000" />
       <workItem from="1653975818852" duration="40243000" />
       <workItem from="1654058385604" duration="493000" />
-      <workItem from="1654074417650" duration="7398000" />
+      <workItem from="1654074417650" duration="16170000" />
+      <workItem from="1654092969868" duration="9783000" />
     </task>
     <servers />
   </component>

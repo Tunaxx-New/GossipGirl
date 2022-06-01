@@ -43,7 +43,7 @@ body{
 }
 input{
     width: 125px;
-    color: gray;
+    color: black;
 }
 .ButtonPink{
     background-color: hotpink!important;
@@ -136,4 +136,12 @@ iframe {
 .large-post-image {
     width: 128px;
     height: auto;
+}
+
+.btn-primary {
+    color: black!important;
+}
+
+.btn-success {
+    color: black!important;
 }

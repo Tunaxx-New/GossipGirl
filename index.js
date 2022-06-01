@@ -22,7 +22,8 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cookie())
 app.set('view engine', 'ejs')
 
-var news = `{"status":"success","totalResults":98791,"results":[{"title":"Citröen Ami eleito como 'Produto do Ano' pela Exame Informática","link":"https://www.noticiasaominuto.com/auto/2005398/citroen-ami-eleito-como-produto-do-ano-pela-exame-informatica?utm_source=rss-auto&amp;utm_medium=rss&amp;utm_campaign=rssfeed","keywords":["Auto"],"creator":["Notícias ao Minuto"],"video_url":null,"description":"Na categoria de 'Mobilidade Inteligente'.","content":"O Citroën AMI foi escolhido como 'Produto do Ano' na categoria de 'Mobilidade Inteligente'. O prémio atribuído pela revista Exame Informática e entregue na passada quinta-feira à tarde em Oeiras. \\"O Citroën AMI não é o carro para a família nem para fazer ‘road trips’, mas representa o que deve ser o futuro da mobilidade urbana: compacto, acessível, pegada ambiental baixíssima, fácil de usar e com um baixo custo de utilização. Uma eficiência evidente logo no design do AMI, que foi otimizado para reduzir o número de peças e os custos de produção e manutenção. Em suma, in” , destacou Sérgio Magno, diretor da Exame Informática. Com autonomia para 75 km, a bateria de iões de lítio de 5,5 kWh que alimenta o motor elétrico de 6 kW (8cv) recarrega-se facilmente, em apenas 3 horas e a partir de uma tomada standard. Leia Também: Não estranhe se vir um Citröen Ami a distribuir correspondência","pubDate":"2022-05-29 08:54:49","image_url":"https://media-manager.noticiasaominuto.com/naom_61129eb04339d.jpg?w=1920","source_id":"noticiasaominuto","country":["portugal"],"category":["top"],"language":"portuguese"},{"title":"Rússia prolonga fecho de aeroportos próximos da fronteira ucraniana","link":"https://www.noticiasaominuto.com/mundo/2006341/russia-prolonga-fecho-de-aeroportos-proximos-da-fronteira-ucraniana?utm_source=rss-mundo&amp;utm_medium=rss&amp;utm_campaign=rssfeed","keywords":["Mundo"],"creator":["Lusa"],"video_url":null,"description": "A Rússia vai manter 11 aeroportos das suas regiões próximas da Ucrânia encerrados até 06 de junho, a...","content":"O espaço aéreo no centro e sul da Rússia foi temporariamente encerrado à aviação comercial em 24 de fevereiro, quando as forças russas invadiram a Ucrânia. A medida foi decretada por um período inicial de uma semana, mas tem sido sucessivamente prorrogada. \\"O regime de restrições temporárias de voos em 11 aeroportos russos foi prorrogado até 06 de junho de 2022\\", disse a Rosaviatsia, num comunicado citado pela agência oficial TASS. A medida, que estava atualmente em vigor até 31 de maio, afeta os aeroportos das cidades de Anapa,Belgorod, Bryansk, Voronezh, Gelendzhik, Krasnodar, Kursk, Lipetsk, Rostov-on-Don, Simferopol e Elista. O regulador recomendou que as companhias aéreas russas organizem o transporte de passageiros em rotas alternativas ut ilizando os aeroportos de Sochi, Volgograd, Mineralnye Vody, Stavropol e Moscovo. De acordo com a Rosaviatsia, todos os outros terminais aeroportuários do país estão a operar normalmente. A guerra na Ucrânia, que a Rússia designa como uma \\"operação militar especial\\", entrou hoje no 95.º dia. Dsconhece-se o número de vítimas de mais de três meses de combates, mas diversas fontes, incluindo a ONU, admitem ser elevado. A ONU confirmou a morte de mais de 4.000 civis, mas tem alertado que o número real será consideravelmente superior. A invasão russa foi condenada pela generalidade da comunidade internacional. A União Europeia e países como os Estados Unidos, o Reino Unido ou o Japão têm decretado sucessivos pacotes de sanções contra interesses russos e fornecido armas à Ucrânia. Leia Também: Zelensky defende que Rússia deve ser declarada \\"Estado terrorista\\"","pubDate":"2022-05-29 08:54:49","image_url":"https://media-manager.noticiasaominuto.com/37404748.jpg?w=1920","source_id":"noticiasaominuto","country":["portugal"],"category":["top"],"language":"portugu ese"},{"title":"Bolsonaro pode estar a tentar replicar invasão do Capitólio no Brasil","link":"https://www.noticiasaominuto.com/mundo/2006339/bolsonaro-pode-estar-a-tentar-replicar-invasao-do-capitolio-no-brasil?u tm_source=rss-mundo&amp;utm_mediu=rss&amp;utm_campaign=rssfeed","keywords":["Mundo"],"creator":["Lusa"],"video_url":null,"description":"O constitucionalista Diego Werneck Arguelhes, signatário da carta envi ada à ONU sobre a \\"campanha se...","content":"\\"Jair Bolsonaro está fazendo isso em câmara lenta, o que a gente está a ver no Brasil é um 06 de janeiro, a invasão do capitólio em câmara lenta\\", contou à Lusa o professor associado do Instituto de Ensino e Pesquisa do Brasil e doutorado em Direito pela Yale University, nos Estados Unidos. O ataque à sede do poder legislativo norte-americano ocorrido em 06 de janeiro de 2021 por uma multidão de apoiantes do ex-presidente Donald Trump que pretendiam impedir a confirmação da eleição de Joe Biden, na sequência de Donald Trump ter levantado suspeitas infundadas de que processo eleitoral tinha sido fraudulento. Este 'ataque à democracia norte-americana' ficou marcado pela morte de cinco pessoas e de mais de uma centena de polícias agredidos. \\"Olhamos para o que aconteceu nos Estados Unidos com a invasão do Capitóli o e percebemos que estava muito claro, basta juntar os factos, que o Bolsonaro está tomando o que aconteceu lá nos Estados Unidos como um 'blueprint', um plano que ele pode seguir\\", denunciou o constitucionalista brasi leiro. Foi precisamente o receio de que aconteça o mesmo no Brasil, que em outubro terá eleições presidenciais, altamente polarizadas entre o atual Presidente brasileiro, Jair Bolsonaro, e o ex-presidente Lula da Silva, q ue levou Diego Werneck Arguelhes e mais de 80 professores e juristas brasileiros a enviarem a carta ao relator especial para a Independência de Juízes e Advogados da ONU, Diego Garcia. \\"Somos um grupo de académicos, de direito, nós não somos ativistas, nem políticos\\", frisou. Para o constitucionalista, o risco de acontecer algo mais grave após as eleições presidenciais no Brasil é maior do que o que aconteceu nos Estado Unidos já qu e, Bolsonaro, começou a plantar o discurso \\"de fraude nas eleições há muito tempo\\", desde as eleições que ele próprio venceu, em 2018. \\"Ele já disse várias vezes que o resultado que não reflita a vitória dele vai ser suspeito\\", lembrou Diego Werneck Arguelhes. \\"Já faz parte da base de apoio dele essa desconfiança em relação às urnas, mesmo que isso não faça sentido alguma e que não existam evidências\\", considerou. Para a lém disso, denunciou, as ações de Bolsonaro para minar o processo eleitoral têm \\"conivência de várias instituições\\" como a Câmara dos Deputados, que nunca iniciou um processo de impeachment (como aconteceu nos Estados Unidos com Trump) e até por parte da Procuradoria-geral da República por não investigar atos de Bolsonaro passiveis de crime. \\"Trump chegou a sofrer um processo de impeachment (...) no Brasil o Bolsonaro não teve ne nhum início de processo contra ele, a mensagem que ele recebeu da Procuradoria-Geral da República é de que ele pode minar a justiça eleitoral, semear a desconfiança nas eleições sem que isso gere um problema para ele\\",acusou. Em paralelo, para além de insistir que o sistema de votação eletrónica do país não é confiável, Bolsonaro tem intensificado os ataques a magistrados do Supremo Tribunal Federal (STF) e tem dito que não respeitará determinadas decisões judiciais, em especial do juiz Alexandre de Morais, que será o presidente do Tribunal Superior Eleitoral durante as eleições presidenciais do Brasil. Em abril, Bolsonaro reverteu a condenação, atrav és de um indulto presidencial, do congressista de extrema-direita Daniel Silveira, condenado a oito anos de prisão pelo Supremo Tribunal Federal (STF) pelas suas ameaças às instituições democráticas. A acrescentar, tem ac usado repetidamente membros da autoridade eleitoral de favorecer o seu principal rival, Luiz Inácio Lula. \\"Nos últimos meses ficou claro que o Governo tem um plano em andamento, que é minar a confiança nas eleições e no judiciário\\" e de \\"intimidar os juízes\\", afirmou Diego Werneck Arguelhes. De acordo com o Constitucionalista, Bolsonaro é um \\"Presidente que quer remover limites ao seu poder\\" e é um homem \\"hostil à ide ia de que o poder dele é limitado por qualquer outra instituição\\". Nas últimas semanas os ataques do Presidente brasileiro à segurança do processo eleitoral têm aumento, tendo Bolsonaro pedido, repetidamente, a partici pação de militares no apuramento dos votos nas eleições que decorrerão em outubro. \\"Infelizmente o setor das forças armadas que está no Governo tem endossado, isso não existe nos Estados Unidos\\", disse Diego Werneck Arguelhes. Voltando às comparações com o que aconteceu no dia 06 de janeiro de 2021 nos Estados Unidos, o constitucionalista brasileiro considerou ter sido \\"um estrago sem precedentes da democracia americana, mas não  foi tão grave como poderia ser\\". No Brasil, insistiu, \\"esse estrago poderá ser muito maior\\". \\"Esse estrago, o Bolsonaro já conseguiu fazer, conseguiu meter em dúvida a questão: Será que as forças armadas e o P residente aceitariam um resultado desfavorável?\\", concluiu. De acordo com as últimas sondagens, Lula da Silva aumentou a diferença para Jair Bolsonaro. O candidato do PT tem 48% das intenções de voto e Bolsonaro, candi dato do Partido Liberal (PL), te 27%. Parvencer à primeira volta é necessário mais de 50% dos votos. Leia Também: Bolsonaro apela aos 'valores cristãos' para conquistar o voto evangélico","pubDate":"2022-05-29 08:54 :49","image_url":"https://media-manager.noticiasaominuto.com/38460247.jpg?w=1920","source_id":"noticiasaominuto","country":["portugal"],"category":["top"],"language":"portuguese"}]}`
+var news = {results: []}
+//var news = `{"status":"success","totalResults":98791,"results":[{"title":"Citröen Ami eleito como 'Produto do Ano' pela Exame Informática","link":"https://www.noticiasaominuto.com/auto/2005398/citroen-ami-eleito-como-produto-do-ano-pela-exame-informatica?utm_source=rss-auto&amp;utm_medium=rss&amp;utm_campaign=rssfeed","keywords":["Auto"],"creator":["Notícias ao Minuto"],"video_url":null,"description":"Na categoria de 'Mobilidade Inteligente'.","content":"O Citroën AMI foi escolhido como 'Produto do Ano' na categoria de 'Mobilidade Inteligente'. O prémio atribuído pela revista Exame Informática e entregue na passada quinta-feira à tarde em Oeiras. \\"O Citroën AMI não é o carro para a família nem para fazer ‘road trips’, mas representa o que deve ser o futuro da mobilidade urbana: compacto, acessível, pegada ambiental baixíssima, fácil de usar e com um baixo custo de utilização. Uma eficiência evidente logo no design do AMI, que foi otimizado para reduzir o número de peças e os custos de produção e manutenção. Em suma, in” , destacou Sérgio Magno, diretor da Exame Informática. Com autonomia para 75 km, a bateria de iões de lítio de 5,5 kWh que alimenta o motor elétrico de 6 kW (8cv) recarrega-se facilmente, em apenas 3 horas e a partir de uma tomada standard. Leia Também: Não estranhe se vir um Citröen Ami a distribuir correspondência","pubDate":"2022-05-29 08:54:49","image_url":"https://media-manager.noticiasaominuto.com/naom_61129eb04339d.jpg?w=1920","source_id":"noticiasaominuto","country":["portugal"],"category":["top"],"language":"portuguese"},{"title":"Rússia prolonga fecho de aeroportos próximos da fronteira ucraniana","link":"https://www.noticiasaominuto.com/mundo/2006341/russia-prolonga-fecho-de-aeroportos-proximos-da-fronteira-ucraniana?utm_source=rss-mundo&amp;utm_medium=rss&amp;utm_campaign=rssfeed","keywords":["Mundo"],"creator":["Lusa"],"video_url":null,"description": "A Rússia vai manter 11 aeroportos das suas regiões próximas da Ucrânia encerrados até 06 de junho, a...","content":"O espaço aéreo no centro e sul da Rússia foi temporariamente encerrado à aviação comercial em 24 de fevereiro, quando as forças russas invadiram a Ucrânia. A medida foi decretada por um período inicial de uma semana, mas tem sido sucessivamente prorrogada. \\"O regime de restrições temporárias de voos em 11 aeroportos russos foi prorrogado até 06 de junho de 2022\\", disse a Rosaviatsia, num comunicado citado pela agência oficial TASS. A medida, que estava atualmente em vigor até 31 de maio, afeta os aeroportos das cidades de Anapa,Belgorod, Bryansk, Voronezh, Gelendzhik, Krasnodar, Kursk, Lipetsk, Rostov-on-Don, Simferopol e Elista. O regulador recomendou que as companhias aéreas russas organizem o transporte de passageiros em rotas alternativas ut ilizando os aeroportos de Sochi, Volgograd, Mineralnye Vody, Stavropol e Moscovo. De acordo com a Rosaviatsia, todos os outros terminais aeroportuários do país estão a operar normalmente. A guerra na Ucrânia, que a Rússia designa como uma \\"operação militar especial\\", entrou hoje no 95.º dia. Dsconhece-se o número de vítimas de mais de três meses de combates, mas diversas fontes, incluindo a ONU, admitem ser elevado. A ONU confirmou a morte de mais de 4.000 civis, mas tem alertado que o número real será consideravelmente superior. A invasão russa foi condenada pela generalidade da comunidade internacional. A União Europeia e países como os Estados Unidos, o Reino Unido ou o Japão têm decretado sucessivos pacotes de sanções contra interesses russos e fornecido armas à Ucrânia. Leia Também: Zelensky defende que Rússia deve ser declarada \\"Estado terrorista\\"","pubDate":"2022-05-29 08:54:49","image_url":"https://media-manager.noticiasaominuto.com/37404748.jpg?w=1920","source_id":"noticiasaominuto","country":["portugal"],"category":["top"],"language":"portugu ese"},{"title":"Bolsonaro pode estar a tentar replicar invasão do Capitólio no Brasil","link":"https://www.noticiasaominuto.com/mundo/2006339/bolsonaro-pode-estar-a-tentar-replicar-invasao-do-capitolio-no-brasil?u tm_source=rss-mundo&amp;utm_mediu=rss&amp;utm_campaign=rssfeed","keywords":["Mundo"],"creator":["Lusa"],"video_url":null,"description":"O constitucionalista Diego Werneck Arguelhes, signatário da carta envi ada à ONU sobre a \\"campanha se...","content":"\\"Jair Bolsonaro está fazendo isso em câmara lenta, o que a gente está a ver no Brasil é um 06 de janeiro, a invasão do capitólio em câmara lenta\\", contou à Lusa o professor associado do Instituto de Ensino e Pesquisa do Brasil e doutorado em Direito pela Yale University, nos Estados Unidos. O ataque à sede do poder legislativo norte-americano ocorrido em 06 de janeiro de 2021 por uma multidão de apoiantes do ex-presidente Donald Trump que pretendiam impedir a confirmação da eleição de Joe Biden, na sequência de Donald Trump ter levantado suspeitas infundadas de que processo eleitoral tinha sido fraudulento. Este 'ataque à democracia norte-americana' ficou marcado pela morte de cinco pessoas e de mais de uma centena de polícias agredidos. \\"Olhamos para o que aconteceu nos Estados Unidos com a invasão do Capitóli o e percebemos que estava muito claro, basta juntar os factos, que o Bolsonaro está tomando o que aconteceu lá nos Estados Unidos como um 'blueprint', um plano que ele pode seguir\\", denunciou o constitucionalista brasi leiro. Foi precisamente o receio de que aconteça o mesmo no Brasil, que em outubro terá eleições presidenciais, altamente polarizadas entre o atual Presidente brasileiro, Jair Bolsonaro, e o ex-presidente Lula da Silva, q ue levou Diego Werneck Arguelhes e mais de 80 professores e juristas brasileiros a enviarem a carta ao relator especial para a Independência de Juízes e Advogados da ONU, Diego Garcia. \\"Somos um grupo de académicos, de direito, nós não somos ativistas, nem políticos\\", frisou. Para o constitucionalista, o risco de acontecer algo mais grave após as eleições presidenciais no Brasil é maior do que o que aconteceu nos Estado Unidos já qu e, Bolsonaro, começou a plantar o discurso \\"de fraude nas eleições há muito tempo\\", desde as eleições que ele próprio venceu, em 2018. \\"Ele já disse várias vezes que o resultado que não reflita a vitória dele vai ser suspeito\\", lembrou Diego Werneck Arguelhes. \\"Já faz parte da base de apoio dele essa desconfiança em relação às urnas, mesmo que isso não faça sentido alguma e que não existam evidências\\", considerou. Para a lém disso, denunciou, as ações de Bolsonaro para minar o processo eleitoral têm \\"conivência de várias instituições\\" como a Câmara dos Deputados, que nunca iniciou um processo de impeachment (como aconteceu nos Estados Unidos com Trump) e até por parte da Procuradoria-geral da República por não investigar atos de Bolsonaro passiveis de crime. \\"Trump chegou a sofrer um processo de impeachment (...) no Brasil o Bolsonaro não teve ne nhum início de processo contra ele, a mensagem que ele recebeu da Procuradoria-Geral da República é de que ele pode minar a justiça eleitoral, semear a desconfiança nas eleições sem que isso gere um problema para ele\\",acusou. Em paralelo, para além de insistir que o sistema de votação eletrónica do país não é confiável, Bolsonaro tem intensificado os ataques a magistrados do Supremo Tribunal Federal (STF) e tem dito que não respeitará determinadas decisões judiciais, em especial do juiz Alexandre de Morais, que será o presidente do Tribunal Superior Eleitoral durante as eleições presidenciais do Brasil. Em abril, Bolsonaro reverteu a condenação, atrav és de um indulto presidencial, do congressista de extrema-direita Daniel Silveira, condenado a oito anos de prisão pelo Supremo Tribunal Federal (STF) pelas suas ameaças às instituições democráticas. A acrescentar, tem ac usado repetidamente membros da autoridade eleitoral de favorecer o seu principal rival, Luiz Inácio Lula. \\"Nos últimos meses ficou claro que o Governo tem um plano em andamento, que é minar a confiança nas eleições e no judiciário\\" e de \\"intimidar os juízes\\", afirmou Diego Werneck Arguelhes. De acordo com o Constitucionalista, Bolsonaro é um \\"Presidente que quer remover limites ao seu poder\\" e é um homem \\"hostil à ide ia de que o poder dele é limitado por qualquer outra instituição\\". Nas últimas semanas os ataques do Presidente brasileiro à segurança do processo eleitoral têm aumento, tendo Bolsonaro pedido, repetidamente, a partici pação de militares no apuramento dos votos nas eleições que decorrerão em outubro. \\"Infelizmente o setor das forças armadas que está no Governo tem endossado, isso não existe nos Estados Unidos\\", disse Diego Werneck Arguelhes. Voltando às comparações com o que aconteceu no dia 06 de janeiro de 2021 nos Estados Unidos, o constitucionalista brasileiro considerou ter sido \\"um estrago sem precedentes da democracia americana, mas não  foi tão grave como poderia ser\\". No Brasil, insistiu, \\"esse estrago poderá ser muito maior\\". \\"Esse estrago, o Bolsonaro já conseguiu fazer, conseguiu meter em dúvida a questão: Será que as forças armadas e o P residente aceitariam um resultado desfavorável?\\", concluiu. De acordo com as últimas sondagens, Lula da Silva aumentou a diferença para Jair Bolsonaro. O candidato do PT tem 48% das intenções de voto e Bolsonaro, candi dato do Partido Liberal (PL), te 27%. Parvencer à primeira volta é necessário mais de 50% dos votos. Leia Também: Bolsonaro apela aos 'valores cristãos' para conquistar o voto evangélico","pubDate":"2022-05-29 08:54 :49","image_url":"https://media-manager.noticiasaominuto.com/38460247.jpg?w=1920","source_id":"noticiasaominuto","country":["portugal"],"category":["top"],"language":"portuguese"}]}`
 app.get('/updateNews', async (req, res) => {
     const user = await mongo.getUser(req.cookies.login, req.cookies.password)
     if (user.title == null && user.isAdmin) {
@@ -65,8 +66,8 @@ app.get("/", async (req, res) =>
             topics: topics,
             user: user,
             toast: tst,
-            news: JSON.parse(news).results
-            //news: news.results
+            //news: JSON.parse(news).results
+            news: news.results
         })
 })
 
@@ -106,27 +107,31 @@ app.get('/createPost', async (req, res) => {
 //
 // GET  -> *.html
 // SEND -> render *.html || ejs
-app.get("/login", (req, res) =>
+/*app.get("/login", (req, res) =>
 {
   res.sendFile(path.join(__dirname, 'html','login.html'))
 })
 app.get("/register", (req, res) =>
 {
   res.sendFile(path.join(__dirname, 'html','register.html'))
-})
+})*/
 
 
 
 //
 // GET -> *html and *css
 //
-app.get("/loginRegister", (req, res) =>
+app.get("/login", (req, res) =>
 {
     res.sendFile(path.join(__dirname, 'html','Login_RegistrationPage.html'))
 })
-app.get("/Login_RegistrationPage.scss", (req, res) =>
+app.get("/register", (req, res) =>
 {
-    res.sendFile(path.join(__dirname, 'html', 'style', 'Login_RegistrationPage.scss'))
+    res.sendFile(path.join(__dirname, 'html','Login_RegistrationPage.html'))
+})
+app.get("/Login_RegistrationPage.css", (req, res) =>
+{
+    res.sendFile(path.join(__dirname, 'html', 'style', 'Login_RegistrationPage.css'))
 })
 
 
@@ -288,7 +293,7 @@ app.get('/search', async (req, res) => {
                 topics: topics,
                 user: user,
                 toast: tst,
-                news: JSON.parse(news).results,
+                news: news.results,
                 posts: posts.filter(e => (e.title.includes(word) || e.user.includes(word)))
             })
     } else {
@@ -297,7 +302,7 @@ app.get('/search', async (req, res) => {
                 topics: topics,
                 user: user,
                 toast: tst,
-                news: JSON.parse(news).results,
+                news: news.results,
                 posts: []
             })
     }
@@ -338,7 +343,7 @@ app.post("/createPost", async (req, res) =>
 {
   const user = await mongo.getUser(req.cookies.login, req.cookies.password)
   if (user.title == null) {
-      req.id = await mongo.createPost(req.cookies.login, req.cookies.password, req.body)
+      req.id = await mongo.createPost(req.cookies.login, req.cookies.password, req.body, user)
       res.cookie('currentIdPost', req.id)
       res.render(path.join(__dirname, 'html', 'view', 'createPost'),
           {
@@ -359,7 +364,7 @@ app.post('/uploadPostImage', async(req, res, next) => {
     if (user.title == null) {
         let post = await getPostsBy('_id', req.cookies.currentIdPost)
         post = post[0]
-        if (post !== undefined && req.cookies.login === post.user) {
+        if (post !== undefined && req.cookies.login === post.user.login) {
             next()
         } else {
             user.title = "Not your post"
@@ -775,7 +780,7 @@ app.get('/profile', async (req, res) => {
             let fOnlines = []
             for (let i = 0; i < user.friends.length; i++) {
                 const friend = await mongo.getUsersBy('login', user.friends[i].login)
-                if (friend[0].online) {
+                if (friend !== undefined && friend[0].online) {
                     fOnlines.push(true)
                 } else {
                     fOnlines.push(false)
@@ -789,7 +794,7 @@ app.get('/profile', async (req, res) => {
         } else {
             let friend = await mongo.getUsersBy('login', req.query.login)
             friend = friend[0]
-            if (friend.title == null) {
+            if (friend !== undefined && friend.title == null) {
                 res.render(path.join(__dirname, 'html', 'view', 'profileReadOnly'),
                     {
                         user: friend
@@ -900,7 +905,8 @@ app.get('/subchat', async (req, res) => {
                 res.render(path.join(__dirname, 'html', 'view', 'fragments', 'chat', 'subchat'), {
                     text: src[lastMessage],
                     friend: req.query.friend,
-                    lastMessage: lastMessage
+                    lastMessage: lastMessage,
+                    user: user
                 })
             } else {
                 res.send(src[lastMessage])

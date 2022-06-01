@@ -13,15 +13,18 @@
         <div class="sidebar">
             <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
                 <li class="nav-item side-button">
-                    <button onclick="changeWindow('', 0);" href="#" class="nav-link active py-3 border-bottom" aria-current="page" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Home">+</button>
+                    <button onclick="changeWindow('', 0);" href="#" class="toggle nav-link active py-3 border-bottom" aria-current="page" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Home">+</button>
                 </li>
                 <% for (let i = 0; i < friends.length; i++) { %>
                 <% if (friends[i].realFriend) { %>
-                <li class="nav-item side-button">
-                    <button onclick="changeWindow('<%=friends[i].login%>', 1)" class="nav-link active py-3 border-bottom" aria-current="page" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Home">
-                    <%=friends[i].login%>
+                <ul class="list-unstyled chat-list mt-2 mb-0">
+                    <button onclick="changeWindow('<%=friends[i].login%>', 1)" class="toggle nav-link active py-3 border-bottom" aria-current="page" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Home">
+                    <li class="clearfix">
+                        <img style="margin:auto;" class="avatar" src="/avatar?src=<%=friends[i].login%>&ext=<%=friends[i].avatarExtension%>" alt="mdo">
+                    </li>
                     </button>
-                </li>
+                    <h6 class="friend-name"><%=friends[i].login%></h6>
+                </ul>
                 <% } %>
                 <% } %>
             </ul>

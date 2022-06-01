@@ -4,7 +4,13 @@ var postSchema = new mongoose.Schema
 ({
         user:
             {
-                type: String
+                type: Object,
+                login: {
+                    type: String
+                },
+                extname: {
+                    type: String
+                }
             },
         title:
             {
@@ -21,6 +27,10 @@ var postSchema = new mongoose.Schema
         realTime:
             {
               type: String
+            },
+        deltaTime:
+            {
+                type: String
             },
         topic:
             {

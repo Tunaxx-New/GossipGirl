@@ -29,7 +29,7 @@
             <div class="toast-header">
                 <% switch(toast.type) {
                     case 2:
-                        %> <i class="fa-solid fa-check toast-icon" style="color:greenyellow;"></i> <%
+                        %> <i class="fa-solid fa-check toast-icon" style="color:grey;"></i> <%
                     break
 
                     case 1:
@@ -70,7 +70,7 @@
         <div class="">
             <div class="row">
                 <div class="col-lg-10 col-xl-8">
-                    <div class="p-5 shadow rounded" style="border: 1px solid black; padding:0!important;">
+                    <div class="p-5 rounded" style="border: 1px solid black; padding:0!important;">
                         <!-- Bootstrap carousel-->
                         <div class="carousel slide carousel-fade" id="carouselExampleIndicators" data-ride="carousel">
                             <!-- Bootstrap controls [dots]-->
@@ -98,12 +98,15 @@
                                 <div class="navbar-collapse collapse" id="navbarTogglerDemo0" style="">
                                 <% if (typeof(news) !== undefined && typeof(news) !== 'undefined') { %>
                                 <% for(var i=0; i<news.length; i+=3) { %>
+                                       <% if(news[i].language === "russian" || news[i].language === "english") {%>
                                         <span class="carousel-item d-inline" style="z-index:0!important">
-                                        <% //if(news[i].language === "russian" || news[i].language === "english" || news[i].language === "kazakh") {%>
                                             <table class="table">
                                             <tr class="row">
                                             <% for(var j=i; j<i+3 && j != news.length; j++) { %>
                                                     <td class="media col">
+                                                        <% if (news[j].link) { %>
+                                                        <a title="Source Title" style="position: relative; bottom:0" href="<%=news[j].link%>"><i class="fa-solid fa-info" style=""></i> More info</a>
+                                                        <%}%>
                                                     <button class="btn btn-secondary hci" type="submit" onClick="javascript:window.location.href='/createPost?newsLink=<%= news[j].link%>';">React</button>
                                                         <% if (news[j].image_url) { %>
                                                     <img class="news-image" src="<%=news[j].image_url%>" alt="" width="75">
@@ -127,17 +130,13 @@
                                                             <% if (news[j].content) { %>
                                                             <p style=""><%=news[j].content.slice(0, 1000)%>...</p>
                                                             <%}%>
-                                                                <% if (news[j].link) { %>
-                                                                <a title="Source Title" style="position: relative; bottom:0" href="<%=news[j].link%>"><i class="fa-solid fa-info" style=""></i> More info</a>
-                                                                <%}%>
                                                             </td>
                                                             <%}%>
                                                         </tr>
                                                     </table>
                                                 </td>
                                             </tr>
-                                            <%//}%>
-                                        </span>
+                                        </span><% } %>
                                 <%}%>
                                     <%}%>
                                 </div>
@@ -240,7 +239,7 @@
         <button id="load-more-button" type="button" class="btn btn-outline-warning center_button_cards" name="Load_more_cards">Load more cards</button>
     </div>
 <div class="chatBox-nav">
-    <div style="background-color: yellow; position:absolute;bottom: 0; height:40px; left:-64px; right: 0px;"></div>
+    <div style="background-color: var(--dark-s); position:absolute;bottom: 0; height:40px; left:-60px; right: 0px;"></div>
     <button onclick="
     let chats = document.getElementsByClassName('chatIframe')
 
@@ -256,7 +255,7 @@
         } else {
             value = -1000
         }
-s
+
     " class="navbar-toggler" type="button" style="position:absolute; bottom: 0; left: -64px;" data-toggle="collapse" data-target="#iframeToggle" aria-controls="" aria-expanded="false" aria-label="Toggle navigation">
         <div class="navbar-toggler-icon text-center"><i class="fa-solid fa-message margin-auto"></i></div>
     </button>
@@ -272,20 +271,44 @@ s
 </div>
 
     <!-- Footer -->
+<img class="ebalos" src="/image?img=footer1.jpg">
     <div class="footer container-fluid w-100 center py-4 border-top">
         <footer>
             <div class="row">
-              <div class="col-4"></div>
-              <div class="col-4"></div>
-              <div class="col-4"></div>
+                <div class="col">
+                    <a href="https://t.me/tunaxxnew">
+                        <img class="avatar m8" src="/image?img=nikita.jpg">
+                    <h3>Nikita Mordvintsev</h3>
+                    <h6>Fullstack developer</h6>
+                    <h6>Leader</h6>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="https://t.me/Ecl1ps0">
+                        <img class="avatar m8" src="/image?img=daniil.jpg">
+                    <h3>Daniil Tsoy</h3>
+                    <h6>Fullstack developer</h6>
+                    <h6>Assistant</h6>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="https://t.me/ygvfhl">
+                        <img class="avatar m8" src="/image?img=islam.jpg">
+                    <h3>Islambek Turarbaev</h3>
+                    <h6>Tester</h6>
+                    <h6>Manager</h6>
+                    </a>
+                </div>
+              <div class="col">
+                  <a class="link-dark linkTo" href="https://github.com/Tunaxx-New"><i class="fa-brands fa-github"></i></a>
+                  <a class="link-dark linkTo" href="https://whispering-cliffs-82789.herokuapp.com/"><i class="fa-solid fa-server"></i></a>
+                  <a class="link-dark linkTo" href="http://tunaxx.me/"><i class="fa-brands fa-digital-ocean"></i></a>
+              </div>
             </div>
 
-            <div class="company-div d-flex justify-content-between my-4">
-                <p>© 2022 GossipGirls Team. All rights reserved.</p>
+            <div class="company-div d-flex justify-content-between my-4" style="border-top-color: var(--pink);">
                 <ul class="list-unstyled d-flex">
-                    <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
-                    <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
-                    <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+                    <p><b>© 2022 GossipGirls Team. All rights reserved.</b></p>
                 </ul>
             </div>
         </footer>

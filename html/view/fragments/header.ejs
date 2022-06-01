@@ -32,7 +32,7 @@
 
             <div class="col">
             <!-- Drop down popup -->
-            <div class="dropdown text-end">
+            <div class="col dropdown text-end">
                 <% if (user.title) { %>
                     <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
                         <img src="/avatar?src=profile" alt="mdo" class="avatar">
@@ -42,7 +42,7 @@
                         <li><a class="dropdown-item" href="/register">Sign Up</a></li>
                     </ul>
                 <% } else { %>
-                    <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" style="text-align: end" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-toggle="profilesButtons" style="text-align: end" data-bs-toggle="" aria-expanded="false">
                         <img class="avatar" src="/avatar?src=<%=user.login%>&ext=<%=user.avatarExtension%>" alt="mdo">
                     </a>
                     <% if (user.online) { %>
@@ -64,6 +64,7 @@
 
             </div>
         </div>
+    </div>
     </div>
 </header>
 <script>

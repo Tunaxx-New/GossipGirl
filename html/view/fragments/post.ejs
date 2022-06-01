@@ -28,10 +28,34 @@
 <div class="container question_bar">
 <div class="card">
     <div class="card-header">
+           <div class="updown line">
+            <ul class="list-inline d-sm-flex my-0">
+                <li class="list-inline-item">
+                    <a type="button" class="without-border btn btn-upvote" href="/dlike?id=<%=post._id%>&type=post&likeType=like">
+                        <i class="fa-solid fa-caret-up"></i>
+                    </a>
+                </li>
+            </ul>
+               <ul class="list-inline d-sm-flex my-0">
+                   <li class="list-inline-item">
+                       <a type="button" class="without-border btn btn-outline-dark">
+                           <%=post.likes.length - post.dislikes.length%>
+                       </a>
+                   </li>
+               </ul>
+            <ul class="list-inline d-sm-flex my-0">
+                <li class="list-inline-item">
+                    <a type="button" class="without-border btn btn-outline-dark" href="/dlike?id=<%=post._id%>&type=post&likeType=dislike">
+                        <i class="fa-solid fa-caret-down"></i>
+                    </a>
+                </li>
+            </ul>
+                </div>
         <img src="/postImage?src=<%=post._id%>&ext=<%=post.extname%>" alt="rover" />
     </div>
     <div class="card-body">
-        <span class="tag tag-teal"><%=post.topic%></span>
+
+        <span class="tag tag-teal" style="margin-bottom: 8px;"><%=post.topic%></span>
         <h4>
             <%=post.title%>
         </h4>
@@ -39,14 +63,66 @@
             <%=post.src%>
         </p>
         <div class="user">
-            <img src="https://yt3.ggpht.com/a/AGF-l7-0J1G0Ue0mcZMw-99kMeVuBmRxiPjyvIYONg=s900-c-k-c0xffffffff-no-rj-mo" alt="user" />
+            <a onclick="window.top.location.href = '/profile?login=<%=post.user.login%>'">
+            <img src="/avatar?src=<%=post.user.login%>&ext=<%=post.user.extname%>" class="avatar" alt="<%=post.user.login%>" style="display: inline!important;">
+            </a>
             <div class="user-info">
-                <h5>July Dec</h5>
-                <small>2h ago</small>
+                <h5><%=post.user.login%></h5>
+                <small><%=post.deltaTime%></small>
             </div>
         </div>
+
+        <hr style="width:90%;text-align:center;margin: auto; margin-top: 16px; margin-bottom: 16px;">
+
+        <!-- Create Answer -->
+        <form action="/createAnswer" method="post" class="row g-2">
+            <input type="value" name="id" value="<%=post._id%>" style="display: none;">
+            <input type="text" name="url" value="<%=url%>&show=true" hidden>
+            <input type="value" name="parent" value="post" style="display: none;">
+            <span class="input-group createAnswer">
+                <input type="text" name="src" class="form-control" placeholder="Write Your Answer to the Question">
+                <button class="btn btn-outline-success" style="display:inline;">Answer</button>
+            </span>
+        </form>
     </div>
+
     <!-- Answer html -->
+    <section class="section-small" style="display: flex;align-items: center;justify-content: center;">
+        <table class="table text-center">
+            <tr class="row">
+                <td class="col">
+                    <i class="fa-solid fa-trophy"></i>
+                    <input checked="checked" class="form-check-input small-radio" type="radio" name="contr-radio" value="" onchange="changeSort('0')" >
+                </td>
+                <td class="col">
+                    <i class="fa-solid fa-thumbs-down"></i>
+                    <input class="form-check-input small-radio" type="radio" name="contr-radio" value="" onchange="changeSort('1')">
+                </td>
+                <td class="col">
+                    <i class="fa-solid fa-spray-can-sparkles"></i>
+                    <input class="form-check-input small-radio" type="radio" name="new-radio" value="" onchange="changeSort('2')">
+                </td>
+                <td class="col">
+                    <i class="fa-solid fa-calendar-xmark"></i>
+                    <input class="form-check-input small-radio" type="radio" name="old-radio" value="" onchange="changeSort('3')">
+                </td>
+            </tr>
+            <tr class="row">
+                <td class="col">
+                    <label class="form-check-label" for="best-radio">Best</label>
+                </td>
+                <td class="col">
+                    <label class="form-check-label" for="contr-radio">Controversial</label>
+                </td>
+                <td class="col">
+                    <label class="form-check-label" for="new-radio">New</label>
+                </td>
+                <td class="col">
+                    <label class="form-check-label" for="old-radio">Old</label>
+                </td>
+            </tr>
+        </table>
+    </section>
     <div id="answers">
         <!-- <iframe onload="resizeIframe(this)" frameborder="0" marginwidth="0" marginheight="0" scrolling="NO" width="100%" height="100%" src="/getAnswers?postId=<%=post._id%>"></iframe> -->
     </div>
@@ -57,43 +133,6 @@
 </div>
 
 </div>
-<!--
-<div class="container question_bar">
-    <h5 class="question_row"><%=post.title%></h5>
-    <div class="question_row">
-        <p class=""><%-post.src%></p>
-
-       --> <!-- Create Answer -->
-       <!-- <form action="/createAnswer" method="post" class="row g-2">
-            <input type="value" name="id" value="<%=post._id%>" style="display: none;">
-            <input type="text" name="url" value="<%=url%>&show=true" hidden>
-            <input type="value" name="parent" value="post" style="display: none;">
-            <span class="input-group">
-                <input type="text" name="src" class="form-control" placeholder="Write Your Answer to the Question">
-                <button class="btn btn-outline-success" style="display:inline;">Answer</button>
-            </span>
-        </form>
-
-    </div>
-    <ul class="list-inline d-sm-flex my-0 proper_comment_margin">
-        <li class="list-inline-item g-mr-20">
-            <a type="button" class="btn btn-outline-primary" href="/dlike?id=<%=post._id%>&type=post&likeType=like">
-                <i class="fa-solid fa-angle-up"></i>
-                <%=post.likes.length%>
-            </a>
-        </li>
-        <li class="list-inline-item g-mr-20">
-            <a type="button" class="btn btn-outline-dark" href="/dlike?id=<%=post._id%>&type=post&likeType=dislike">
-                <i class="fa-solid fa-angle-down"></i>
-                <%=post.dislikes.length%>
-            </a>
-        </li>
-    </ul>
-    <button onclick="changeSort('0')">Best</button>
-    <button onclick="changeSort('1')">Controversial</button>
-    <button onclick="changeSort('2')">New</button>
-    <button onclick="changeSort('3')">Old</button>
-</div>-->
 <script>
     const id = '<%=post._id%>'
     let isShow = false
@@ -171,5 +210,5 @@
             ((0|(1<<8) + b + (256 - b) * percent / 100).toString(16)).substr(1);
     }
 </script>
-
+<script src="https://kit.fontawesome.com/520e072e3a.js" crossorigin="anonymous"></script>
 </body>
