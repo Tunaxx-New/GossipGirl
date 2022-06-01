@@ -19,6 +19,20 @@
 
         <h1 style="text-align: center;">Create post</h1>
 
+        <% if (typeof(id) !== undefined && typeof(id) !== 'undefined') { %>
+        <form action="/uploadPostImage" enctype="multipart/form-data" method="POST">
+            <div class="form-group">
+                <input type="file" name="file">
+                <input type="text" value="<%=id%>" name="id" hidden>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">
+                    Create
+                </button>
+            </div>
+        </form>
+        <% } else { %>
+
         <form action="/createPost" method="POST">
 
             <select class="form-select" aria-label="All topics" name="topic">
@@ -40,7 +54,7 @@
 
             <div class="form-group">
                 <label for="description">Description<span class="require">*</span></label>
-                <textarea rows="5" class="form-control" name="src" required></textarea>
+                <input tyle="text" rows="5" class="form-control" name="src" required></input>
             </div>
 
             <div class="form-group">
@@ -51,9 +65,10 @@
 
         </form>
 
+        <% } %>
+
     </div>
 
 </div>
-
 </body>
 </html>

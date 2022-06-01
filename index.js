@@ -9,7 +9,7 @@ const email      = require('./email.js')
 const fs         = require('./fs.js')
 const multer     = require('./fileSave')
 const utils      = require('./utils.js')
-const {getUser}  = require("./mongo");
+const {getUser, getPostsBy}  = require("./mongo");
 const chat       = require("./chat.js")
 const http = require('http');
 const https = require('https');
@@ -113,6 +113,20 @@ app.get("/login", (req, res) =>
 app.get("/register", (req, res) =>
 {
   res.sendFile(path.join(__dirname, 'html','register.html'))
+})
+
+
+
+//
+// GET -> *html and *css
+//
+app.get("/loginRegister", (req, res) =>
+{
+    res.sendFile(path.join(__dirname, 'html','Login_RegistrationPage.html'))
+})
+app.get("/Login_RegistrationPage.scss", (req, res) =>
+{
+    res.sendFile(path.join(__dirname, 'html', 'style', 'Login_RegistrationPage.scss'))
 })
 
 
@@ -324,8 +338,13 @@ app.post("/createPost", async (req, res) =>
 {
   const user = await mongo.getUser(req.cookies.login, req.cookies.password)
   if (user.title == null) {
-      mongo.createPost(req.cookies.login, req.cookies.password, req.body)
-      res.redirect('/')
+      req.id = await mongo.createPost(req.cookies.login, req.cookies.password, req.body)
+      res.cookie('currentIdPost', req.id)
+      res.render(path.join(__dirname, 'html', 'view', 'createPost'),
+          {
+              id: req.id,
+              user: user
+          })
   } else {
       user.title = "Unsigned user"
       user.message = "Please login to the site!"
@@ -335,7 +354,48 @@ app.post("/createPost", async (req, res) =>
           })
   }
 })
-
+app.post('/uploadPostImage', async(req, res, next) => {
+    const user = await mongo.getUser(req.cookies.login, req.cookies.password)
+    if (user.title == null) {
+        let post = await getPostsBy('_id', req.cookies.currentIdPost)
+        post = post[0]
+        if (post !== undefined && req.cookies.login === post.user) {
+            next()
+        } else {
+            user.title = "Not your post"
+            user.message = "Please change image of your post id!"
+            res.render(path.join(__dirname, 'html', 'view', 'error'),
+                {
+                    error: user
+                })
+        }
+    } else {
+        user.title = "Unsigned user"
+        user.message = "Please login to the site!"
+        res.render(path.join(__dirname, 'html', 'view', 'error'),
+            {
+                error: user
+            })
+    }
+}, multer.imageUploadPost.single('file'), (req, res, next) =>
+{
+    mongo.changePost({_id: req.cookies.currentIdPost}, {extname: path.extname(req.file.originalname)})
+    res.redirect('/')
+}, (error, req, res, next) => {
+    console.log(error)
+    res.render(path.join(__dirname, 'html', 'view', 'error'),
+        {
+            error: { title: "Image extension error", message: "Please upload only jpg or png images" }
+        })
+})
+app.get("/postImage", async (req, res) =>
+{
+    const pth = path.join(__dirname, 'html', 'icons', 'postImages', req.query.src + req.query.ext)
+    if (await fs.checkFileExists(pth))
+        res.sendFile(pth)
+    else
+        res.sendFile(path.join(__dirname, 'html', 'icons', 'post.png'))
+})
 
 
 app.post("/login", async (req, res) =>
@@ -451,6 +511,10 @@ app.get("/commonStyle.css", (req, res) =>
 {
     res.sendFile(path.join(__dirname, 'html', 'style', 'commonStyle.css'))
 })
+app.get("/css", (req, res) =>
+{
+    res.sendFile(path.join(__dirname, 'html', 'style', req.query.file + '.css'))
+})
 app.get("/colors.css", (req, res) =>
 {
     res.sendFile(path.join(__dirname, 'html', 'style', 'colors.css'))
@@ -494,7 +558,10 @@ app.post("/avatar", async (req, res, next) =>
     mongo.changeAnswer({ login: req.cookies.login }, { 'user.avatarExtension': ext })
     res.redirect('/')
 }, (error, req, res, next) => {
-    res.status(400).send({ error: error.message })
+    res.render(path.join(__dirname, 'html', 'view', 'error'),
+        {
+            error: { title: "Image not uploaded!", message: "Please select file" }
+        })
 })
 
 
@@ -908,19 +975,6 @@ app.get('/addFriend', async (req, res) => {
 })
 
 
-//
-// Send message
-//
-app.post('/chat', async (req, res) => {
-    const user = await mongo.getUser(req.cookies.login, req.cookies.password)
-    if(user.title == null) {
-        chat
-    } else {
-        res.redirect('back')
-    }
-})
-
-
 
 //
 // Change the social networks
@@ -935,6 +989,7 @@ app.get('/exit', async(req, res) => {
     const user = await mongo.getUser(req.cookies.login, req.cookies.password)
     if (user.title == null) {
         mongo.changeUser(req.cookies.login, 'online', false)
+        res.redirect('back')
     } else {
         res.send('nologin')
     }

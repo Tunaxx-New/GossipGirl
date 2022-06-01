@@ -1,28 +1,50 @@
-<!DOCTYPE html>
-<html >
 <head>
-    <meta charset="UTF-8">
-    <% console.log(typeof(link)); if (typeof(link) !== undefined && typeof(link) !== 'undefined') { %>
+    <% if (typeof(link) !== undefined && typeof(link) !== 'undefined') { %>
     <meta http-equiv="refresh" content="3; url=<%=link%>" />
     <% } %>
     <title><%=error.title%></title>
-    <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css'>
-    <link rel="stylesheet" href="/error.css">
-    <link href="./commonStyle.css" type="text/css" rel="stylesheet">
-
+    <link href="/error.css" type="text/css" rel="stylesheet">
 </head>
-<body>
+<a href="https://codepen.io/uiswarup/full/yLzypyY" target="_blank">
 
-<div class="wrapper">
-    <div class="header">
-        <h3><%=error.title%></h3>
-        <p><%=error.message%></p>
+    <!--dust particel-->
+    <div>
+        <div class="starsec"></div>
+        <div class="starthird"></div>
+        <div class="starfourth"></div>
+        <div class="starfifth"></div>
     </div>
-</div>
+    <!--Dust particle end--->
 
-<% if (typeof(link) !== undefined && typeof(link) !== 'undefined') { %>
-<a href="<%=link%>">Redirect</a>
-<% } %>
 
-</body>
-</html>
+    <div class="lamp__wrap">
+        <div class="lamp">
+            <div class="cable"></div>
+            <div class="cover"></div>
+            <div class="in-cover">
+                <div class="bulb"></div>
+            </div>
+            <div class="light"></div>
+        </div>
+    </div>
+    <!-- END Lamp -->
+    <section class="error">
+        <!-- Content -->
+        <div class="error__content">
+            <div class="error__message message">
+                <h1 class="message__title"><%=error.title%></h1>
+                <p class="message__text"><%=error.message%></p>
+            </div>
+            <div class="error__nav e-nav">
+                <% if (error.link) { %>
+                <a href="" target="_blanck" class="e-nav__link"><%=error.link%></a>
+                <% } else { %>
+                <a href="/" target="_blanck" class="e-nav__link"></a>
+                <% } %>
+            </div>
+        </div>
+        <!-- END Content -->
+
+    </section>
+
+</a>

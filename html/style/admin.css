@@ -132,3 +132,8 @@ iframe {
 .divIframe {
     width: 100%!important;
 }
+
+.large-post-image {
+    width: 128px;
+    height: auto;
+}

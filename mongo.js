@@ -4,7 +4,7 @@ const validator = require('./database/validator.js')
 
 //mongodb+srv://gg:wp@cluster0.2qhvm.mongodb.net/GossipGirl?retryWrites=true&w=majority
 //mongodb://127.0.0.1:27017/GossipGirl
-const uri = "mongodb+srv://gg:wp@cluster0.2qhvm.mongodb.net/GossipGirl?retryWrites=true&w=majority"
+const uri = "mongodb://127.0.0.1:27017/GossipGirl"
 let db
 
 mongoose.connect(uri, { useNewUrlParser: true }, err => {
@@ -229,13 +229,13 @@ async function createPost(user, password, data)
     } else {
         post.topic = 'All topics'
     }
-
     post.src = data.src
     post.link = data.url
     post.time = time
     post.title = data.title
     post.realTime = time.split("").reverse().join("")
     post.save().then()
+    return post._id.toString()
 }
 
 
@@ -343,30 +343,6 @@ async function getSortedUsers(key, by) {
 //
 // Send a password
 //
-
-
-
-//
-// Like
-//
-async function like(postId, login, password) {
-    let error = {
-        title: "",
-        message: ""
-    }
-
-    if (login === undefined) {
-        error.title = "Unknown user!"
-        error.message = "You are not log in"
-        return error
-    }
-
-    const user = await getUser(login, password)
-    if (user.title)
-        return user
-
-
-}
 
 
 

@@ -43,6 +43,10 @@ var postSchema = new mongoose.Schema
         link:
             {
                 type: String
+            },
+        extname:
+            {
+                type: String
             }
     }
 )

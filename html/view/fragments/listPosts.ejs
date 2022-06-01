@@ -9,6 +9,7 @@
     <thead>
     <tr>
         <th>Id</th>
+        <th>Image</th>
         <th>User</th>
         <th>Title</th>
         <th>Source</th>
@@ -21,6 +22,7 @@
     <%for (var o = 0; o < posts.length; o++){%>
         <tr>
             <th class="ThId align-middle"><%=id[o]%></th>
+            <td><img class="large-post-image" src="/postImage?src=<%=posts[o]._id%>&ext=<%=posts[o].extname%>" alt="rover" /></td>
             <form action="/postAction" method="get">
                 <td class="align-middle"><%= posts[o].user%></td>
                 <td class="align-middle"><%= posts[o].title%></td>
